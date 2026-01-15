@@ -2,62 +2,238 @@ import React from 'react';
 
 export const Philosophy: React.FC = () => {
   return (
-    <section id="philosophy" className="py-24 px-4 sm:px-6 lg:px-8 bg-background-light dark:bg-background-dark relative overflow-hidden">
-      {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
-            <span className="material-icons-outlined text-4xl">spa</span>
+    <div id="philosophy" className="bg-background-light dark:bg-background-dark overflow-hidden">
+      {/* Section 1: Why We Ride / Riding slooow */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 text-primary mb-6">
+              <span className="material-icons-outlined text-4xl">motorcycle</span>
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Riding slooow</h2>
+            <p className="text-xl md:text-2xl font-display text-primary font-medium">Why we ride</p>
           </div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">Our Philosophy</h2>
-          <div className="w-24 h-1 bg-secondary mx-auto rounded-full mb-8" />
-          <p className="text-xl md:text-2xl font-display italic text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            "Riding slooow means turning moments into everlasting memories."
-          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+             <div className="prose dark:prose-invert max-w-none text-lg text-gray-600 dark:text-gray-300 space-y-6">
+              <p>
+                As travellers we want to experience everyday life as it feels for common people in our guest country. The truth is: everybody moves on two-wheelers! So we simply shove motorbikes under our buttocks and mingle with the locals.
+              </p>
+              <p>
+                For India what vehicle could be more appealing than the iconic Royal Enfield.
+              </p>
+              <p className="font-medium text-primary text-xl">
+                Playing an active part instead of being the spectators is part of our philosophy.
+              </p>
+              <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mt-8">Skip the rocky path with us!</h3>
+              <p>
+                Don´t waste your time on dusty potholed roads and stuck between stinking exhaust fumes and mother-swearing rickshaw drivers in painful midday heat.
+              </p>
+              <p>
+                Don’t waste your precious time looking for routes, things to do and places to eat. Leave the effort of all the planning to us.
+              </p>
+              <p>
+                We´ll take you straight to the most spectacular and also the most intimate experiences our area has to offer.
+              </p>
+            </div>
+            <div className="relative group">
+               <div className="absolute -inset-4 bg-secondary/20 rounded-2xl transform -rotate-2 transition-transform duration-500 group-hover:rotate-1" />
+              <img
+                src="/images/Why-we-ride.webp"
+                alt="Why we ride"
+                className="relative rounded-2xl shadow-xl w-full h-auto object-cover"
+              />
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="prose dark:prose-invert max-w-none">
-            <h3 className="font-display text-3xl font-bold mb-6 text-primary">Slowing Down the Pace</h3>
-            <p className="mb-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              At Slow Moto Tours, we intentionally move away from the "rush-hour" mentality. We design our routes not to cover the maximum distance, but to uncover the maximum experience.
-            </p>
-            <p className="mb-8 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              Picture yourself riding a legendary Royal Enfield Classic 350, feeling the warm wind as you cruise through stunning paddy plains, cool jungle forests, and along the serene beaches of the Arabian Sea.
-            </p>
-            
-            <ul className="space-y-4">
-              {[
-                "Mindfully aware of every detail",
-                "Immersion in local culture",
-                "Stress-free, curated routes",
-                "Small groups for personal experience"
-              ].map((item, index) => (
-                <li key={index} className="flex items-center gap-4 group">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
-                    <span className="material-icons-outlined text-sm text-primary group-hover:text-white">check</span>
-                  </div>
-                  <span className="text-lg text-gray-700 dark:text-gray-200 font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
+      {/* Section 2: Our Philosophy */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-surface-light dark:bg-surface-dark">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Riding slooow for peace of body and mind</h2>
+            <p className="text-xl font-display text-primary">Our Philosophy</p>
           </div>
 
-          <div className="relative group">
-            <div className="absolute -inset-4 bg-secondary/20 rounded-2xl transform rotate-3 transition-transform duration-500 group-hover:rotate-6 group-hover:scale-105" />
-            <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvzVXzESciFBdf6rUknHO9a7DfGPG1G4S75B6US1aV-sQCQPCWRNcbRyU34gSyfyVwdjXcOoEVjoRWP6_e3bPvr9_lJaU8BWVLg4MSPl-7jPKuD-mtZRC0fJPqP0wacPmIDkFOv4YnIIYUMUBvVJNLDTOUyab5RjVyAGgEOajFXg6HbKkZaL4g_ZKleA4px57ipS7s-3iIl6wVkEUpnW15jJIrPvkZtf3w3SIvqLXsPehynJi3DYu7zS99TtosKv501ao0T2o9NIS2" 
-              alt="Rider on Royal Enfield" 
-              className="relative rounded-2xl shadow-2xl w-full h-auto object-cover aspect-[4/3] transform transition duration-500"
-            />
-             <div className="absolute bottom-6 right-6 bg-white/90 dark:bg-black/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-lg">
-                <p className="text-xs font-bold uppercase tracking-widest text-primary">Est. 2018</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+             <div className="relative order-2 lg:order-1">
+               <div className="absolute -inset-4 bg-primary/10 rounded-2xl transform rotate-2 transition-transform duration-500" />
+                <img
+                  src="/images/Caution-Elephant.webp"
+                  alt="Caution Elephant Sign"
+                  className="relative rounded-2xl shadow-xl w-full h-auto object-cover"
+                />
+            </div>
+
+            <div className="space-y-12 order-1 lg:order-2">
+              <div>
+                <h3 className="font-display text-2xl font-bold text-primary mb-4 flex items-center gap-2">
+                   <span className="material-icons-outlined">visibility</span>
+                   Being cautious.
+                </h3>
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                  India is a firework for all your senses. Everything in this chaos is reaching for your attention. Maze like roads filled with 2,3,4, multiple wheelers, humans and animals of all sizes and colours and everything else under the sun. But don´t worry. We will give you all the time to get Indianized.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-display text-2xl font-bold text-primary mb-4 flex items-center gap-2">
+                   <span className="material-icons-outlined">spa</span>
+                   Being conscious.
+                </h3>
+                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                  Slow Travelling is the art of travelling with open senses, engaging with people and places, discovering food and culture – and taking your time.
+                </p>
+                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                  Slowing down the pace we give you the space and the security to be conscious and mindful, to immerse yourself in the beautiful chaos around you. Our desire is to give you an immersive and intimate experience that noticeably and sustainably enhances the quality of your life after your ride with us.
+                </p>
+                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                  Slow Travelling is a fundamental pillar for sustainable tourism as you engage with the culture and the local people with joy, respect and appreciation, thereby preserving the diversity of customs, cuisine, folklore and language. It is above all more relaxed for you and more respectful for the environment and the locals.
+                </p>
+                <p className="text-lg font-medium text-primary italic">
+                  And we care for our companion creatures: we ride our Enfields, but never Elephants.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Meet the Crew */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Meet the Crew!</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">Our motivation is the joy of sharing.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Aromal */}
+            <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+              <div className="aspect-[3/4] overflow-hidden">
+                <img src="/images/Aromal.webp" alt="Aromal" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-6 flex-grow flex flex-col">
+                <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-1">Aromal</h3>
+                <p className="text-primary font-medium text-sm uppercase tracking-wide mb-4">Royal Enfield Technician</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                  With profound knowledge of RE Bikes "The Moto Surgeon" keeps our Enfields fit and safe. Daily checks, services and customisations make him, our customers and our bikes very happy.
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-auto">
+                  Speaking English, Malayalam, Hindi and Tamil.
+                </p>
+              </div>
+            </div>
+
+             {/* Jo */}
+            <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+              <div className="aspect-[3/4] overflow-hidden">
+                <img src="/images/Jo.webp" alt="Jo" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-6 flex-grow flex flex-col">
+                <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-1">Jo</h3>
+                <p className="text-primary font-medium text-sm uppercase tracking-wide mb-4">Co-Founder and Road Captain</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                  Our Riders call him the "driving coach for foreigners on Indian roads". He leads our convoy resolutely and safely through all situations, constantly looking for the little roadside attractions and the next chance for a Chai.
+                </p>
+                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-auto">
+                  Speaking English and German.
+                </p>
+              </div>
+            </div>
+
+            {/* Pratish */}
+             <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+              <div className="aspect-[3/4] overflow-hidden">
+                <img src="/images/Pratish.webp" alt="Pratish" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-6 flex-grow flex flex-col">
+                <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-1">Pratish</h3>
+                <p className="text-primary font-medium text-sm uppercase tracking-wide mb-4">Co-Founder and Road Captain</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                  Pratish is riding on our taillight position, having our backs. He keeps us trouble-free with cops and checkposts and is a caring host for our group on tea stops, restaurants and accommodations.
+                </p>
+                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-auto">
+                  Speaking English, Malayalam, Hindi and Kannada.
+                </p>
+              </div>
+            </div>
+
+            {/* Nevinson */}
+             <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
+              <div className="aspect-[3/4] overflow-hidden">
+                <img src="/images/Nevinson.webp" alt="Nevinson" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="p-6 flex-grow flex flex-col">
+                <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-1">Nevinson</h3>
+                <p className="text-primary font-medium text-sm uppercase tracking-wide mb-4">The Big Support</p>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                  As a passionate and experienced traveller Nevin is our ace up the sleeve. He is driving the support truck with your luggage and the spare parts and is backup and support in all respects.
+                </p>
+                 <p className="text-xs text-gray-500 dark:text-gray-400 mt-auto">
+                  Speaking English, Malayalam, Hindi and Tamil.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       {/* Section 4: Our Story */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary/5">
+         <div className="max-w-4xl mx-auto">
+             <div className="text-center mb-12">
+               <span className="material-icons-outlined text-4xl text-primary mb-4">history_edu</span>
+                <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Our Story</h2>
              </div>
-          </div>
+             <div className="prose dark:prose-invert max-w-none text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6">
+                <p>
+                  In early 2020 Jo went on a 5000 km motorbike trip through the South of India on a Royal Enfield.
+                </p>
+                <p>
+                  At one stopover he met Pratish, who turned out not only to be a perfectly caring host for this nights homestay, but also an Enfield enthusiast. The following day the two started their motorbikes and Pratish with his great feel for relaxed riding and knowledge of the local routes guided them across the area. Jo told Pratish about his experience of heavy hardships to get to the sweetest spots over the most beautiful routes and how much he´d love to make them accessible for likeminded travellers on a schedule, simply to share the beauty of this world.
+                </p>
+                <p>
+                  Pratish was immediately hooked and they decided to team up for this venture to bundle their many years experiences in travelling, biking, hosting and guiding.
+                </p>
+                <p>
+                  Although an immediate start was abruptly disrupted by the following pandemic, it gave them time to develop the concept in more depth. While Pratish started scouting routes in Kerala, Jo began to build the website in Austria.
+                </p>
+                <p>
+                  To turn this idea into a solid company they decided to file for incorporation as a LLP in India because this way they could achieve the best possible coverage for their riders and themselves in all legal aspects. The gruelling bureaucratic process of incorporation itself was finally finished after one and a half years. As was the pandemic. And as soon as possible Jo returned to India, the company bought their first own Enfield Classic and all pieces came together to offer you what is now branded as <strong className="text-primary">Slow Moto Tours - Guided Motorcycle Tours India</strong>.
+                </p>
+             </div>
+         </div>
+      </section>
+
+      {/* Section 5: Our Partners */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12 text-gray-900 dark:text-white">Our Partners</h2>
+           <div className="flex flex-col md:flex-row items-center justify-center gap-12 bg-surface-light dark:bg-surface-dark p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 dark:border-zinc-800">
+             <div className="w-full md:w-1/3 flex justify-center">
+                <img
+                  src="/images/RE-Tours-Logo.webp"
+                  alt="Royal Enfield Tours"
+                  className="max-h-32 md:max-h-40 w-auto object-contain"
+                />
+             </div>
+             <div className="w-full md:w-2/3 text-left">
+                <h3 className="font-display text-2xl font-bold text-gray-900 dark:text-white mb-4">Royal Enfield Tours</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  We’re proud to announce that Slow Moto Tours is now a listed partner on Royal Enfield Tours, the official touring platform of Royal Enfield.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  This collaboration allows international riders to discover our immersive, all-inclusive motorcycle tours through Kerala, Tamil Nadu, Karnataka, and Goa — now featured alongside some of the most trusted motorcycle journeys in the world.
+                </p>
+                 <p className="text-gray-600 dark:text-gray-300">
+                  We remain an independent operator and this partnership emphasises the quality and reliability of our offering and our ongoing commitment to premium experiences for our global riding community.
+                </p>
+             </div>
+           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };

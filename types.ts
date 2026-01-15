@@ -17,3 +17,20 @@ export interface Testimonial {
   quote: string;
   rating: number;
 }
+
+
+export interface ServiceFeature {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface Story {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+

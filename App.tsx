@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Philosophy } from './components/Philosophy';
 import { Routes } from './components/Routes';
+
 import { Itinerary } from './components/Itinerary';
 import { Bikes } from './components/Bikes';
 import { Safety } from './components/Safety';
@@ -11,6 +12,7 @@ import { Food } from './components/Food';
 import { Culture } from './components/Culture';
 import { FAQ } from './components/FAQ';
 import { Gallery } from './components/Gallery';
+
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
 
@@ -22,6 +24,7 @@ function App() {
         <Hero />
         <Philosophy />
         <Routes />
+
         <Itinerary />
         <Bikes />
         <Safety />
@@ -30,9 +33,9 @@ function App() {
         <Culture />
         <FAQ />
         <Gallery />
-        <Testimonials />
-      </main>
-      <Footer />
+
+        <Stories />
+
     </div>
   );
 }
