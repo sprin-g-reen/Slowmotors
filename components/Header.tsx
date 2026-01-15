@@ -5,6 +5,13 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import DatesEnquiryModal from "./DatesEnquiryModal";
+import PricingModal from "./PricingModal";
+import QuickFactsModal from "./QuickFactsModal";
+import ItineraryModal from "./ItineraryModal";
+import IncludedModal from "./IncludedModal";
+import RequirementsModal from "./RequirementsModal";
+import BookingProcessModal from "./BookingProcessModal";
+import FaqModal from "./FaqModal";
 
 const navLinks = [
     { name: "Our Motorcycle Rides", href: "/tours" },
@@ -16,10 +23,12 @@ const secondaryNavLinks = [
     { name: "Slow Moto Stories", href: "/blog" },
 ];
 
+type ModalType = "dates" | "pricing" | "facts" | "itinerary" | "included" | "requirements" | "booking" | "faq" | null;
+
 export default function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isDatesModalOpen, setIsDatesModalOpen] = useState(false);
+    const [activeModal, setActiveModal] = useState<ModalType>(null);
     const [isExperienceOpen, setIsExperienceOpen] = useState(false);
 
     useEffect(() => {
@@ -30,10 +39,25 @@ export default function Header() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const openDatesModal = () => {
-        setIsDatesModalOpen(true);
+    const openModal = (type: ModalType) => {
+        setActiveModal(type);
         setIsMobileMenuOpen(false);
     };
+
+    const closeModal = () => {
+        setActiveModal(null);
+    };
+
+    const experienceItems = [
+        { label: "Dates & Enquiry", type: "dates" as const },
+        { label: "Pricing", type: "pricing" as const },
+        { label: "Quick Facts", type: "facts" as const },
+        { label: "Itinerary", type: "itinerary" as const },
+        { label: "Included", type: "included" as const },
+        { label: "Requirements", type: "requirements" as const },
+        { label: "Booking Process", type: "booking" as const },
+        { label: "FAQ", type: "faq" as const },
+    ];
 
     return (
         <>
@@ -70,13 +94,16 @@ export default function Header() {
                             <button className="flex items-center text-dark hover:text-primary font-medium transition-colors py-2">
                                 Experience <ChevronDown size={16} className="ml-1" />
                             </button>
-                            <div className="absolute top-full left-0 mt-0 w-56 bg-white rounded-lg shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left border border-gray-100">
-                                <button
-                                    onClick={openDatesModal}
-                                    className="block w-full text-left px-4 py-3 text-dark hover:bg-gray-50 hover:text-primary transition-colors font-medium"
-                                >
-                                    Dates & Enquiry
-                                </button>
+                            <div className="absolute top-full left-0 mt-0 w-56 bg-white rounded-lg shadow-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left border border-gray-100 flex flex-col">
+                                {experienceItems.map((item) => (
+                                    <button
+                                        key={item.type}
+                                        onClick={() => openModal(item.type)}
+                                        className="text-left px-4 py-3 text-dark hover:bg-gray-50 hover:text-primary transition-colors font-medium border-b border-gray-50 last:border-0"
+                                    >
+                                        {item.label}
+                                    </button>
+                                ))}
                             </div>
                         </div>
 
@@ -133,12 +160,15 @@ export default function Header() {
                             </button>
                             {isExperienceOpen && (
                                 <div className="pl-4 flex flex-col space-y-2 mt-1 mb-2 bg-gray-50 rounded-lg p-2">
-                                    <button
-                                        onClick={openDatesModal}
-                                        className="text-left text-dark/80 hover:text-primary font-medium py-2 px-2 rounded-md hover:bg-white transition-colors"
-                                    >
-                                        Dates & Enquiry
-                                    </button>
+                                    {experienceItems.map((item) => (
+                                        <button
+                                            key={item.type}
+                                            onClick={() => openModal(item.type)}
+                                            className="text-left text-dark/80 hover:text-primary font-medium py-2 px-2 rounded-md hover:bg-white transition-colors"
+                                        >
+                                            {item.label}
+                                        </button>
+                                    ))}
                                 </div>
                             )}
                         </div>
@@ -167,7 +197,14 @@ export default function Header() {
                 )}
             </header>
 
-            <DatesEnquiryModal isOpen={isDatesModalOpen} onClose={() => setIsDatesModalOpen(false)} />
+            <DatesEnquiryModal isOpen={activeModal === "dates"} onClose={closeModal} />
+            <PricingModal isOpen={activeModal === "pricing"} onClose={closeModal} />
+            <QuickFactsModal isOpen={activeModal === "facts"} onClose={closeModal} />
+            <ItineraryModal isOpen={activeModal === "itinerary"} onClose={closeModal} />
+            <IncludedModal isOpen={activeModal === "included"} onClose={closeModal} />
+            <RequirementsModal isOpen={activeModal === "requirements"} onClose={closeModal} />
+            <BookingProcessModal isOpen={activeModal === "booking"} onClose={closeModal} />
+            <FaqModal isOpen={activeModal === "faq"} onClose={closeModal} />
         </>
     );
 }
