@@ -1,65 +1,102 @@
-import Image from "next/image";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Values from "@/components/Values";
+import TheBike from "@/components/TheBike";
+import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div className="min-h-screen">
+      <Header />
+
+      <main>
+        <Hero />
+        <Values />
+
+        {/* Discover Southern India Section */}
+        <section className="py-24 bg-white/40">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-secondary text-lg font-bold uppercase tracking-widest mb-4">Discover</h2>
+            <h3 className="text-4xl md:text-5xl font-bold text-dark mb-8 uppercase">Southern India</h3>
+            <div className="bg-white/60 p-8 md:p-12 rounded-lg border border-gray-100 shadow-sm backdrop-blur-sm">
+              <p className="text-xl leading-relaxed text-dark opacity-90 mb-6">
+                From the lush backwaters of Kerala to the vibrant beaches of Goa, Southern India is a rider's paradise. Our guided tours take you through winding mountain roads, ancient temples, and aromatic spice plantations.
+              </p>
+              <p className="text-lg leading-relaxed text-dark opacity-80 mb-8">
+                Experience the true essence of India, moving at a pace that allows you to absorb every detail. This isn't just a motorcycle tour; it's a journey into the soul of a culture.
+              </p>
+              <a href="/tours" className="inline-flex items-center text-primary font-bold hover:gap-2 transition-all group">
+                EXPLORE OUR TOURS <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Who We Are Section */}
+        <section className="py-24">
+          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <div className="aspect-square w-full max-w-md mx-auto overflow-hidden rounded-full border-8 border-white shadow-2xl relative z-10">
+                <img
+                  src="https://slowmoto.tours/wp-content/uploads/Pratish-and-Jo-desktop.webp"
+                  alt="Jo and Pratish"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-secondary/10 rounded-full blur-3xl -z-10" />
+            </div>
+
+            <div>
+              <h2 className="text-secondary text-lg font-bold uppercase tracking-widest mb-4">The Founders</h2>
+              <h3 className="text-4xl font-bold text-dark mb-6 uppercase">Jo & Pratish</h3>
+              <p className="text-lg text-dark/80 leading-relaxed mb-6">
+                Slow Moto Tours was born from a shared passion for exploration, motorcycles, and the rich tapestry of Indian life. Jo and Pratish believe in "Slow Travel" – the art of taking it all in, one mile at a time.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <p className="text-dark/70">15+ years of experience leading tours in India.</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <p className="text-dark/70">Expert knowledge of local routes and hidden gems.</p>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                  <p className="text-dark/70">Deep commitment to sustainable and respectful tourism.</p>
+                </div>
+              </div>
+              <a href="/about" className="inline-block bg-dark text-light px-8 py-3 rounded-md font-bold hover:bg-black transition-colors">
+                OUR PHILOSOPHY
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Map Section */}
+        <section className="py-24 bg-dark text-light overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 text-center mb-16">
+            <h2 className="text-secondary text-lg font-bold uppercase tracking-widest mb-4">Our Area</h2>
+            <h3 className="text-4xl md:text-5xl font-bold mb-6">RIDERS PARADISE</h3>
+            <p className="max-w-2xl mx-auto opacity-70">From Kochi to Goa, we've mapped out the most scenic, soulful, and satisfying routes for any rider.</p>
+          </div>
+          <div className="max-w-6xl mx-auto px-4">
+            <img
+              src="https://slowmoto.tours/wp-content/uploads/Slow-Moto-Tours-Overview-Map-South-India-Kochi-Goa.webp"
+              alt="South India Tour Map"
+              className="w-full h-auto rounded-xl shadow-2xl brightness-90 hover:brightness-100 transition-all duration-700"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          </div>
+        </section>
+
+        <TheBike />
+        <Testimonials />
+
       </main>
+
+      <Footer />
     </div>
   );
 }
