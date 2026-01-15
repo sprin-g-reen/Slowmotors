@@ -18,6 +18,7 @@ export interface Testimonial {
   rating: number;
 }
 
+
 export interface ServiceFeature {
   id: string;
   title: string;
@@ -32,3 +33,4 @@ export interface Story {
   image: string;
   link: string;
 }
+

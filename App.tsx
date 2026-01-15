@@ -2,10 +2,17 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Philosophy } from './components/Philosophy';
-import { Gallery } from './components/Gallery';
-import { Services } from './components/Services';
 import { Routes } from './components/Routes';
-import { Stories } from './components/Stories';
+
+import { Itinerary } from './components/Itinerary';
+import { Bikes } from './components/Bikes';
+import { Safety } from './components/Safety';
+import { Accommodation } from './components/Accommodation';
+import { Food } from './components/Food';
+import { Culture } from './components/Culture';
+import { FAQ } from './components/FAQ';
+import { Gallery } from './components/Gallery';
+
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
 
@@ -16,13 +23,19 @@ function App() {
       <main>
         <Hero />
         <Philosophy />
-        <Gallery />
-        <Services />
         <Routes />
+
+        <Itinerary />
+        <Bikes />
+        <Safety />
+        <Accommodation />
+        <Food />
+        <Culture />
+        <FAQ />
+        <Gallery />
+
         <Stories />
-        <Testimonials />
-      </main>
-      <Footer />
+
     </div>
   );
 }
