@@ -5,6 +5,8 @@ import TheBike from "@/components/TheBike";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 import HomeContent from "@/components/HomeContent";
+import Gallery from "@/components/Gallery";
+import BottomContent from "@/components/BottomContent";
 
 export default function Home() {
   return (
@@ -15,9 +17,10 @@ export default function Home() {
         <Hero />
         <Values />
         <HomeContent />
+        <Gallery />
         <TheBike />
         <Testimonials />
-
+        <BottomContent />
       </main>
 
       <Footer />
