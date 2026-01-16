@@ -1,17 +1,24 @@
+"use client";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubPageLayout from "@/components/SubPageLayout";
 import Image from "next/image";
 import Link from "next/link";
 import { TOURS_DATA } from "@/app/data/tours";
+import { useLanguage } from "@/components/LanguageProvider";
+import { translations } from "@/lib/translations";
 
 export default function ToursPage() {
+    const { language } = useLanguage();
+    const t = translations[language].tours;
+
     return (
         <>
             <Header />
             <SubPageLayout
-                title="Our Motorcycle Rides"
-                subtitle="Carefully curated routes through the heart of Southern India."
+                title={t.title}
+                subtitle={t.subtitle}
             >
                 <div className="max-w-7xl mx-auto px-4 py-24">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -39,7 +46,7 @@ export default function ToursPage() {
                                         href={`/tours/${tour.slug}`}
                                         className="block text-center w-full py-2 border-2 border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-colors uppercase text-sm"
                                     >
-                                        View Details
+                                        {t.view_details}
                                     </Link>
                                 </div>
                             </div>
