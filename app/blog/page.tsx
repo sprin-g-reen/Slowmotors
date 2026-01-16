@@ -1,28 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubPageLayout from "@/components/SubPageLayout";
+import { blogPosts } from "@/app/data/blogPosts";
+import Link from "next/link";
 
 export default function BlogPage() {
-    const posts = [
-        {
-            title: "Traffic Rules, Road Conditions, and Safety in India",
-            date: "Jan 15, 2025",
-            excerpt: "A Survival Guide for First-Time Riders in the Land of Horns, Herds, and Holy Chaos. 10½ Hilariously Honest Observations.",
-            image: "https://slowmoto.tours/wp-content/uploads/Crazy-Indian-Traffic-comic-style.webp"
-        },
-        {
-            title: "Kickstarting our season - From Ha Giang loop to our Diwali tour",
-            date: "Oct 20, 2024",
-            excerpt: "Our upcoming season kicks off with our first tour in October, perfectly timed with Diwali, the festival of lights.",
-            image: "https://slowmoto.tours/wp-content/uploads/Bike-Parade-leaving-Hasanur.webp"
-        },
-        {
-            title: "Opening the Roads to Chirakkal",
-            date: "Jan 01, 2023",
-            excerpt: "As we rode through the bustling streets of Kochi, a mix of excitement and apprehension filled my mind. Would everything go according to plan?",
-            image: "https://slowmoto.tours/wp-content/uploads/Collage-01012023.webp"
-        }
-    ];
+    const posts = blogPosts;
 
     return (
         <>
@@ -46,7 +29,7 @@ export default function BlogPage() {
                                     <div className="text-secondary text-sm font-bold uppercase mb-2">{post.date}</div>
                                     <h3 className="text-xl font-bold mb-4 uppercase leading-tight">{post.title}</h3>
                                     <p className="opacity-70 mb-6 flex-grow">{post.excerpt}</p>
-                                    <button className="text-primary font-bold hover:underline text-left mt-auto">READ MORE</button>
+                                    <Link href={`/blog/${post.slug}`} className="text-primary font-bold hover:underline text-left mt-auto">READ MORE</Link>
                                 </div>
                             </div>
                         ))}
