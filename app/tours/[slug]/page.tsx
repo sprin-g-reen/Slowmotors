@@ -164,7 +164,7 @@ export default async function TourDetailsPage({ params }: { params: Promise<{ sl
               </div>
             </div>
             <div className="mt-8 text-center text-sm opacity-60">
-                Prices include 5% Indian "Goods and Service Tax".
+                Prices include 5% Indian &quot;Goods and Service Tax&quot;.
             </div>
             <div className="mt-8 text-center">
                 <button className="bg-primary text-white px-8 py-3 rounded-lg font-bold uppercase hover:bg-primary/90 transition-colors">

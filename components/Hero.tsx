@@ -1,8 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
+import { useLanguage } from "./LanguageProvider";
 
 export default function Hero() {
+    const { t } = useLanguage();
+
     return (
         <section className="relative h-screen min-h-[600px] w-full flex items-center justify-center overflow-hidden">
             {/* Background Image */}
@@ -24,7 +28,7 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                     className="text-light text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight drop-shadow-2xl"
                 >
-                    time to explore
+                    {t("hero.title")}
                 </motion.h1>
 
                 <motion.p
@@ -33,7 +37,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="text-light text-xl md:text-2xl mb-10 font-medium opacity-90 drop-shadow-md"
                 >
-                    Experience authentic India on guided Royal Enfield motorcycle tours
+                    {t("hero.subtitle")}
                 </motion.p>
 
                 <motion.div
@@ -41,12 +45,12 @@ export default function Hero() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    <a
+                    <Link
                         href="/tours"
                         className="inline-block bg-primary hover:bg-green-700 text-light px-8 py-4 rounded-full text-lg font-bold uppercase tracking-widest transition-all hover:scale-105 active:scale-95 shadow-xl"
                     >
-                        FIND YOUR MOTORCYCLE RIDE
-                    </a>
+                        {t("hero.cta")}
+                    </Link>
                 </motion.div>
             </div>
 
