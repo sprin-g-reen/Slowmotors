@@ -38,7 +38,35 @@ export interface Tour {
   }[];
 }
 
-export const TOURS_DATA: Tour[] = [
+export interface TranslatedTour extends Tour {
+  titleDe?: string;
+  subtitleDe?: string;
+  descriptionDe?: string;
+  introTextDe?: string[];
+  itineraryDe?: {
+    day: number;
+    title: string;
+    description: string;
+  }[];
+  quickFactsDe?: {
+    startEnd?: string;
+    tourDuration?: string;
+    totalDistance?: string;
+    averageRiding?: string;
+    bikesMax?: string;
+    airport?: string;
+    pillionNote?: string;
+  };
+  includedDe?: string[];
+  requirementsDe?: string[];
+  faqDe?: {
+    question: string;
+    answer: string;
+  }[];
+}
+
+export const TOURS_DATA: TranslatedTour[] = [
+  // ... (Full data content, same as previously generated but without import error)
   {
     slug: "the-seema-ride",
     title: "The Seema Ride",
@@ -55,6 +83,16 @@ export const TOURS_DATA: Tour[] = [
       "Soak in the serene atmosphere of our beachside base near Kochi before gearing up for the adventure ahead. As you hop on your Enfield, get ready to experience the perfect blend of coastal charm and rural activity on your way to the majestic Athirappilly Falls.",
       "Venture deeper into the forested mountains of wildlife sanctuaries, bravely traversing the untamed wilderness and navigating 40 hairpin bends down on your route to Pollachi. Immerse yourself in the unique spirituality of an inspiring eco-village, where luxurious villas await amidst the sounds of nature.",
       "Continue your adventure motorcycle trip through coconut plantations, entering the breathtaking mountain scenery of the Anamalai Tiger Reserve en route to Munnar. Marvel at the steep hills cloaked in tea plantations, relax in a secluded nature resort before descending back to Kochi, where your ride concludes with fond memories of an adventure motorcycle trip that exceeds all expectations."
+    ],
+    titleDe: "The Seema Ride",
+    subtitleDe: "6 Tage Kochi Rundreise",
+    descriptionDe: "Eine beeindruckende und abwechslungsreiche Abenteuer-Motorradtour vom tropischen Klima am Ozean in die Berge der Munnar Hills. Durch Tiger- und Elefantenreservate, die milde Luft der Teeplantagen und kühle Wälder zu außergewöhnlichen Unterkünften.",
+    introTextDe: [
+      "Begleite uns auf eine unvergessliche Abenteuer-Motorradreise namens „The Seema Ride“!",
+      "Seema, abgeleitet aus dem Hindi, bedeutet „Grenzland“, und unsere Reise führt uns durch die faszinierenden Grenzgebiete von Kerala und Tamil Nadu und erstreckt sich über 480 Kilometer landschaftlicher Schönheit und kultureller Entdeckungen.",
+      "Genieße die ruhige Atmosphäre unserer Basis am Strand in der Nähe von Kochi, bevor du dich auf das bevorstehende Abenteuer vorbereitest. Wenn du auf deine Enfield steigst, mach dich bereit für die perfekte Mischung aus Küstencharme und ländlichem Treiben auf dem Weg zu den majestätischen Athirappilly-Wasserfällen.",
+      "Wage dich tiefer in die bewaldeten Berge der Wildschutzgebiete, durchquere mutig die ungezähmte Wildnis und meistere 40 Haarnadelkurven auf deinem Weg nach Pollachi. Tauche ein in die einzigartige Spiritualität eines inspirierenden Ökodorfes, wo luxuriöse Villen inmitten der Klänge der Natur auf dich warten.",
+      "Setze deine Abenteuer-Motorradreise durch Kokosnussplantagen fort und fahre in die atemberaubende Berglandschaft des Anamalai-Tigerreservats auf dem Weg nach Munnar. Bestaune die steilen, von Teeplantagen bedeckten Hügel, entspanne dich in einem abgelegenen Naturresort, bevor du zurück nach Kochi absteigst, wo deine Fahrt mit schönen Erinnerungen an eine Abenteuer-Motorradreise endet, die alle Erwartungen übertrifft."
     ],
     itinerary: [
       {
@@ -100,6 +138,38 @@ export const TOURS_DATA: Tour[] = [
         image: "https://slowmoto.tours/wp-content/uploads/Check-out-Kochi.webp"
       }
     ],
+    itineraryDe: [
+      {
+        day: 1,
+        title: "Dein Ankunftstag, Kochi",
+        description: "Willkommen an unserer Basis am Strand. Atme tief durch, entspanne dich und spring ins Arabische Meer. Nimm Platz auf deiner Enfield. Triff deine Mitfahrer und unsere Crew bei einem kalten Getränk am Esstisch und schlaf dich gut aus, bevor es richtig spannend wird."
+      },
+      {
+        day: 2,
+        title: "Kochi zu den Athirappilly Fällen",
+        description: "Wir lassen es an deinem ersten Tag auf den Enfields ruhig angehen und du erlebst einen Durchschnitt dessen, was dich an Verkehr und Straßenverhältnissen erwartet. Von der dichten Küstenregion erreichen wir bald ländliche Gebiete und gleiten schließlich über eine kurvenreiche Straße in das kühlere Waldklima zu den beeindruckenden Athirappilly Wasserfällen. Übernachten werden wir in einer abgelegenen, modernen Villa an einem wunderschönen Dschungelfluss."
+      },
+      {
+        day: 3,
+        title: "Athirappilly Fälle nach Pollachi",
+        description: "Vier Stunden über schöne Straßen fahren wir unsere Enfields tiefer in den Wald und die Berge eines Wildschutzgebietes. Jeden Tag beten wir zu allen verfügbaren Göttern, dass die Straße nicht wegen wilder Elefanten gesperrt ist. Wir passieren die kleine Stadt Valparai und biegen nach Norden ab über endlose Kurven durch Teeplantagen und 40 Haarnadelkurven hinunter in die Ebene, wo wir bald unser Ziel erreichen. Ein verträumtes Ökodorf, eingebettet in einen Kokosnusshain in der ruhigen Landschaft von Pollachi, erwartet uns, bereit zum Entspannen und Übernachten."
+      },
+      {
+        day: 4,
+        title: "Pollachi nach Munnar",
+        description: "Durch Kokosnussplantagen fahren wir unsere Enfields der aufgehenden Sonne entgegen zum Waldkontrollposten des Anaimalai Tiger Reservats. Auf einer kleinen Straße navigieren wir tiefer und höher in die großartigen Landschaften dieses Wildschutzgebietes. Wir kratzen an der 2000-Meter-Marke und befinden uns auf einer breiten und perfekten Straße, die von einem Motorradenthusiasten entworfen worden sein muss. Endlose Kurven durch Teeplantagen werden von atemberaubenden Ausblicken begleitet. Wir erreichen die Stadt Munnar, unser heutiges Ziel. Unser schönes Naturresort liegt etwas tiefer, abseits von Lärm und Touristen."
+      },
+      {
+        day: 5,
+        title: "Munnar nach Kochi",
+        description: "Auf unserer letzten Etappe verlassen wir die wunderschönen Hügel von Munnar. Mit Bergblick gleiten wir langsam in zwei Stunden über kurvenreiche Straßen in gutem Zustand die Hügel hinunter zurück in die Gegend von Kochi. Da das Klima wieder heißer wird, wird es auch der Verkehr. Wir fahren zurück in die Küstengebiete und zu unserem Ausgangspunkt am Meer, wo du vielleicht gleich hineinspringen möchtest."
+      },
+      {
+        day: 6,
+        title: "Check-Out in Kochi",
+        description: "Nimm ein letztes Bad im Arabischen Meer und nimm all diese Erinnerungen mit. Teile deine erstaunliche Erfahrung mit deiner Familie und Freunden. Hab eine entspannte und sichere Weiterreise und halte die Augen offen für unsere nächsten Fahrten. Wir arbeiten bereits an neuen Routen und Zielen."
+      }
+    ],
     pricing: {
       rider: 1390,
       pillion: 1140,
@@ -114,6 +184,15 @@ export const TOURS_DATA: Tour[] = [
       airport: "Kochi / Cochin / COK",
       pillionNote: "Short stretches may be unsuitable for pillion riders. In such cases, pillion riders have a place in our support vehicle."
     },
+    quickFactsDe: {
+        startEnd: "Kochi, Kerala, Indien",
+        tourDuration: "6 Tage / 5 Nächte / 4 Tage auf der Enfield",
+        totalDistance: "480 km",
+        averageRiding: "4,5 Stunden/Tag inklusive Pausen",
+        bikesMax: "Max. 6 Motorräder",
+        airport: "Kochi / Cochin / COK",
+        pillionNote: "Kurze Strecken können für Soziusfahrer ungeeignet sein. In solchen Fällen haben Soziusfahrer einen Platz in unserem Begleitfahrzeug."
+    },
     included: [
       "Royal Enfield Classic 350 motorbike including gas and kilometers",
       "English speaking tour guide and support crew",
@@ -127,12 +206,32 @@ export const TOURS_DATA: Tour[] = [
       "Oceans, rivers, swimming pools",
       "Our gratitude for booking with us :-)"
     ],
+    includedDe: [
+        "Royal Enfield Classic 350 Motorrad inklusive Benzin und Kilometer",
+        "Englischsprachiger Reiseleiter und Support-Crew",
+        "Ein engagierter Royal Enfield Mechaniker ist die ganze Zeit bei uns",
+        "Begleitwagen für Gepäck und Ersatzausrüstung",
+        "Unterkunft (Doppelzimmer oder Einzelzimmer je nach Buchung)",
+        "Frühstück, Mittag- und Abendessen",
+        "Alle alkoholfreien Getränke",
+        "Versicherung für das Motorrad (deckt Sachschäden am Motorrad sowie Sach- und Personenschäden an Dritten)",
+        "Eintrittsgelder für Sehenswürdigkeiten, Naturschutzgebiete, Mautgebühren",
+        "Ozeane, Flüsse, Schwimmbäder",
+        "Unser Dank für deine Buchung :-)"
+    ],
     requirements: [
       "valid passport",
       "visa (get your official visa here: https://indianvisaonline.gov.in)",
       "valid internationl driving license for 350ccm motorbikes",
       "international travel insurance (covering costs of outpatient and inpatient treatment and prescribed remedies if you are acutely ill or have an accident abroad)",
       "personal protective equipment (mandatory: helmet, proper shoes and gloves; highly recommended: protective clothing, raingear, dust protection, sunglasses and sun screen lotion)"
+    ],
+    requirementsDe: [
+        "gültiger Reisepass",
+        "Visum (erhalte dein offizielles Visum hier: https://indianvisaonline.gov.in)",
+        "gültiger internationaler Führerschein für 350ccm Motorräder",
+        "internationale Reiseversicherung (deckt Kosten für ambulante und stationäre Behandlung sowie verschriebene Medikamente bei akuter Krankheit oder Unfall im Ausland)",
+        "persönliche Schutzausrüstung (Pflicht: Helm, festes Schuhwerk und Handschuhe; dringend empfohlen: Schutzkleidung, Regenkleidung, Staubschutz, Sonnenbrille und Sonnencreme)"
     ],
     faq: [
       {
@@ -163,6 +262,36 @@ export const TOURS_DATA: Tour[] = [
         question: "Can I bring my own bike?",
         answer: "It has many advantages if the whole group rides the same bike. Our tour is accompanied by an Enfield mechanic and we are equipped with the most common spare parts. Also in terms of safety and cruising speed, having the same body type and engine throughout the group is of great advantage. The cost to rent one of our Enfields is included in the price. However if you want to take the ride on your own bike, please contact us."
       }
+    ],
+    faqDe: [
+        {
+            question: "Gibt es WLAN?",
+            answer: "Einrichtungen wie Strom, WLAN und Wäscherei sind in den Unterkünften verfügbar."
+        },
+        {
+            question: "Ist es sicher?",
+            answer: "Informationen zur Sicherheit auf der Straße findest du in unserem Abschnitt „Sicherheit“. Ein Vorteil unserer geführten Touren ist, dass du dich darauf verlassen kannst, dass unsere vertrauenswürdigen Guides ein Auge auf dich haben. Wie überall auf der Welt kannst du mit vereinzelten Taschendieben und Betrügern rechnen. Aber anders als an anderen Orten werden sich die Einheimischen eher auf die Seite der Touristen stellen als auf die ihrer eigenen Leute. Malaria ist in Südindien kein Risiko. Es gibt große Mücken, aber die verursachen nichts als das übliche Jucken. Dengue-Fieber ist in Südindien endemisch, besonders während der Monsunzeit, daher sind gute Vorsichtsmaßnahmen wie starke Repellents und Netze unerlässlich."
+        },
+        {
+            question: "Wie wird das Wetter sein?",
+            answer: "Südindien liegt nur eine kurze Strecke vom Äquator entfernt und genießt daher ein tropisches Klima. Während der Winter Europa frieren lässt, sind wir in der Trockenzeit mit viel Sonnenschein und warmen Temperaturen in den tieferen Lagen ohne viel Regen oder Luftfeuchtigkeit. Die durchschnittliche Tagestemperatur liegt dort bei 28°C. Am heißesten Punkt des Tages kann die Temperatur auf bis zu 32°C steigen. Abende kühlen nach Sonnenuntergang auf angenehme 23°C ab. In den höheren Lagen auf unseren Routen liegen die Tagestemperaturen im Durchschnitt bei etwa 20 – 22 °C, während die Temperaturen nachts bis auf 9 °C sinken können. Bring also unbedingt auch warme Kleidung mit. Richtige Regenkleidung zum Überziehen sollte den Job erledigen. Die Wassertemperatur ist das ganze Jahr über angenehm hoch und mit 29°C sogar höher als die durchschnittliche Lufttemperatur!"
+        },
+        {
+            question: "Bin ich fit und erfahren genug?",
+            answer: "Wir möchten, dass unsere Fahrer fit genug sind, um 4-7 Stunden am Tag bei sonnigen Bedingungen zu fahren. Während Erfahrung mit langen Fahrten nicht zwingend erforderlich ist, ist es immer besser, wenn du ein paar hundert Kilometer Fahrt hinter dir hast. Bitte kläre mit deinem Arzt ab, ob du irgendwelche Vorerkrankungen hast."
+        },
+        {
+            question: "Wie sind die Straßenverhältnisse in Indien?",
+            answer: "Auf unserer Route werden wir über so ziemlich alles fahren, was unter Straßenoberflächen beschrieben werden kann. Wir gleiten über brandneue Bergkurven und cruisen über vierspurige Autobahnen, die abrupt auf schlaglochübersäte Landstraßen führen, begegnen engen Gassen in der Innenstadt sowie manövrieren langsam über Schotter- und Sandabschnitte. Mach dir keine Sorgen um das Handling der Motorräder, die Enfield ist genau für das breite Spektrum der indischen Straßenverhältnisse gebaut."
+        },
+        {
+            question: "Werde ich Magen-Darm-Erkrankungen bekommen?",
+            answer: "Biken macht mit Magenverstimmung keinen Spaß. Und während wir die Gesamtreaktion deines Systems auf indische Bedingungen nicht garantieren können, legen wir höchsten Wert auf hygienische Standards in den Küchen unserer Partner. Alle Zutaten sind frisch, mit Flaschenwasser gewaschen und kein ungares Essen berührt die Teller."
+        },
+        {
+            question: "Kann ich mein eigenes Motorrad mitbringen?",
+            answer: "Es hat viele Vorteile, wenn die ganze Gruppe das gleiche Motorrad fährt. Unsere Tour wird von einem Enfield-Mechaniker begleitet und wir sind mit den gängigsten Ersatzteilen ausgestattet. Auch in Bezug auf Sicherheit und Reisegeschwindigkeit ist es von großem Vorteil, denselben Karosserietyp und Motor in der ganzen Gruppe zu haben. Die Kosten für die Miete einer unserer Enfields sind im Preis inbegriffen. Wenn du die Fahrt jedoch auf deinem eigenen Motorrad machen möchtest, kontaktiere uns bitte."
+        }
     ]
   },
   {
@@ -266,7 +395,12 @@ export const TOURS_DATA: Tour[] = [
         question: "Is it safe?",
         answer: "A good thing about our guided tours is that you can rely on our trustful guides to have an eye on you. As anywhere else in the world you can expect the odd pickpockets and conmen. But unlike other places, the locals will side with the tourists rather than their own people. Malaria is not a risk in South India. There are big mosquitoes, but they cause nothing but the usual itching. Dengue fever is endemic to South India, particularly during monsoon season, so good precautions such as strong repellants and nets are vital."
       }
-    ]
+    ],
+
+    // German
+    titleDe: "Goa Ke Us Paar",
+    subtitleDe: "6 Tage Goa Rundreise",
+    descriptionDe: "Eine luxuriöse Abenteuer-Motorradtour durch Goas ruhiges Hinterland und atemberaubende Küstenregionen, ergänzt durch exklusive, handverlesene Aktivitäten, historische Unterkünfte und authentische Küche.",
   },
   {
     slug: "the-roads-to-chirakkal",
@@ -428,7 +562,12 @@ export const TOURS_DATA: Tour[] = [
         question: "Is it safe?",
         answer: "A good thing about our guided tours is that you can rely on our trustful guides to have an eye on you. As anywhere else in the world you can expect the odd pickpockets and conmen. But unlike other places, the locals will side with the tourists rather than their own people. Malaria is not a risk in South India. There are big mosquitoes, but they cause nothing but the usual itching. Dengue fever is endemic to South India, particularly during monsoon season, so good precautions such as strong repellants and nets are vital."
       }
-    ]
+    ],
+
+    // German
+    titleDe: "The Roads to Chirakkal",
+    subtitleDe: "14 Tage Kochi Rundreise",
+    descriptionDe: "Fahre die legendäre Royal Enfield Bullet entlang der Grenze von Kerala, Tamil Nadu und Karnataka. Vom Ozean durch Teeplantagen, sonnige Reisfelder und kühle Dschungelwälder, hoch in die Berge in Tiger- und Elefantenreservate.",
   },
   {
     slug: "goa-ka-rishta",
@@ -575,7 +714,12 @@ export const TOURS_DATA: Tour[] = [
         question: "Is it safe?",
         answer: "A good thing about our guided tours is that you can rely on our trustful guides to have an eye on you. As anywhere else in the world you can expect the odd pickpockets and conmen. But unlike other places, the locals will side with the tourists rather than their own people. Malaria is not a risk in South India. There are big mosquitoes, but they cause nothing but the usual itching. Dengue fever is endemic to South India, particularly during monsoon season, so good precautions such as strong repellants and nets are vital."
       }
-    ]
+    ],
+
+    // German
+    titleDe: "Goa Ka Rishta",
+    subtitleDe: "12 Tage Kochi → Goa",
+    descriptionDe: "Ein aufregendes Einweg-Motorradabenteuer, das die malerischen Landschaften der Westghats erkundet. Von Kerala über Tamil Nadu nach Karnataka und Goa genießt du Fahrten durch Reservate und zu Naturwundern und ruhigen Aufenthalten.",
   },
   {
     slug: "goa-se-wapasi",
@@ -722,7 +866,12 @@ export const TOURS_DATA: Tour[] = [
         question: "Is it safe?",
         answer: "A good thing about our guided tours is that you can rely on our trustful guides to have an eye on you. As anywhere else in the world you can expect the odd pickpockets and conmen. But unlike other places, the locals will side with the tourists rather than their own people. Malaria is not a risk in South India. There are big mosquitoes, but they cause nothing but the usual itching. Dengue fever is endemic to South India, particularly during monsoon season, so good precautions such as strong repellants and nets are vital."
       }
-    ]
+    ],
+
+    // German
+    titleDe: "Goa Se Wapasi",
+    subtitleDe: "12 Tage Goa → Kochi",
+    descriptionDe: "Eine spannende Einweg-Motorradtour durch die Westghats, Keralas Wildreservate und Tamil Nadus Kulturlandschaften. Erlebe die Pracht der Natur und die kulturelle Vielfalt Südindiens.",
   },
   {
     slug: "your-custom-ride",
@@ -733,16 +882,13 @@ export const TOURS_DATA: Tour[] = [
     image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800",
     alt: "Custom Motorcycle Trip Planning",
     headerImage: "https://slowmoto.tours/wp-content/uploads/Sunset-River-our-rides.webp",
+    mapImage: "",
     introText: [
       "Based on your ideas, group size and timeframe, we will put together a wonderful tailor-made package for you. With all our creativity, experience and local knowledge.",
       "Start wherever you want – end wherever you want – choose your area. Whatever your ideas of brilliant custom motorcycle adventure holidays are, we will help you make it happen. With all our experience, our local knowledge, our contacts and our bikes. Or your own bikes if you wish."
     ],
     itinerary: [],
-    pricing: {
-      rider: 0,
-      pillion: 0,
-      singleRoom: 0
-    },
+    pricing: { rider: 0, pillion: 0, singleRoom: 0 },
     quickFacts: {
       startEnd: "Flexible",
       tourDuration: "Flexible",
@@ -753,6 +899,11 @@ export const TOURS_DATA: Tour[] = [
     },
     included: [],
     requirements: [],
-    faq: []
+    faq: [],
+
+    // German
+    titleDe: "Deine individuelle Tour",
+    subtitleDe: "Maßgeschneiderte Abenteuer",
+    descriptionDe: "Südindien gehört dir! Lass uns deine maßgeschneiderte Abenteuer-Motorradtour entwerfen. Dein Timing, deine Route, deine Begleitung - keine Grenzen. Wir würden gerne dein individuelles All-Inclusive-Royal-Enfield-Abenteuer entwerfen.",
   }
 ];
