@@ -5,6 +5,9 @@ export interface BlogPost {
     excerpt: string;
     image: string;
     content: string;
+    titleDe?: string;
+    excerptDe?: string;
+    contentDe?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -77,6 +80,72 @@ export const blogPosts: BlogPost[] = [
 
 <h3 class="text-xl font-bold mt-6 mb-2">Ready to Ride the Living Beast That Is Indian Traffic?</h3>
 <p class="mb-4">Come ride with us. Come laugh with us. Come get slightly airborne on that unexpected speed breaker.</p>
+        `,
+        titleDe: "Verkehrsregeln, Straßenverhältnisse und Sicherheit in Indien",
+        excerptDe: "Ein Überlebensführer für Erstfahrer im Land der Hupen, Herden und des heiligen Chaos. 10½ urkomisch ehrliche Beobachtungen.",
+        contentDe: `
+<p class="mb-4">Planst du deine erste Motorradtour in Indien? Klopf dir erst mal auf die Schulter. Dann zieh den Helm fest und öffne dein Herz für ein Land, in dem Verkehrsregeln eher sanfte Vorschläge sind und der Verkehr wie Wasser fließt – chaotisch, unvorhersehbar, aber irgendwie immer in Bewegung.</p>
+<p class="mb-4">Hier ist die Sache, die den meisten Neulingen nicht klar ist: Inder sind im Straßenverkehr unbewusst hyper-aufmerksam. Sie schauen vielleicht nicht in den Rückspiegel. Sie hören deine Hupe vielleicht nicht bewusst. Aber ihr sechster Sinn ist eingeschaltet. Sie sind auf die Frequenz des Chaos eingestellt, immer bereit für ein plötzliches Ausweichen, eine heilige Kuh oder einen wilden Fußgänger mitten im Moonwalk. Geh davon aus, dass alles passieren kann. Denn das wird es wahrscheinlich.</p>
+<p class="mb-4">Wie eine sehr weise (und möglicherweise müde) Reifenmarke einmal sagte: „Die Straße ist voller Idioten.“ Und doch… überleben alle.</p>
+<p class="mb-4">Denn der indische Verkehr ist nicht zufällig – er ist ein lebender Organismus. Er atmet, pulsiert und passt sich an. Der Trick ist, nicht dagegen anzukämpfen, sondern den Rhythmus zu finden und mitzufließen. Wenn du das einmal geschafft hast, wird das Fahren hier nicht nur machbar, sondern meditativ. So ähnlich wie Surfen, nur mit Kühen.</p>
+<p class="mb-4">Also hier ist er: dein schnörkelloser, vollkommen wahrer, leicht frecher Leitfaden für das Fahren auf indischen Straßen – basierend auf 100% gelebter Erfahrung.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">1. Straßen haben Spuren. Fahrer haben... Fantasie.</h3>
+<p class="mb-4">Fahrbahnmarkierungen existieren, werden aber wie höfliche Vorschläge behandelt. Die meisten Fahrer bevorzugen die Freistil-Methode – zwei Spuren gleichzeitig nutzen, neue erschaffen oder unsichtbaren GPS-geleiteten Krafttieren folgen.</p>
+<p class="mb-4"><strong>Profi-Tipp:</strong> Bleib flexibel. Deine Spur ist dort, wo dein Motorrad gerade hinpasst.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">2. Die Hupe ist dein Blinker, Bremslicht und sozialer Eisbrecher</h3>
+<p class="mb-4">In Indien spricht jeder Hupisch. Du hupst zum Überholen. Du hupst, um Hallo zu sagen. Du hupst, weil die Sonne scheint. Es geht weniger um Warnung als um Präsenz.</p>
+<p class="mb-4">Wenn deine Hupe funktioniert, existierst du. Wenn sie laut ist, wirst du respektiert. Wenn sie musikalisch ist, bist du eine Legende.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">3. Rote Ampeln sind nur... Vorschläge. Höfliche.</h3>
+<p class="mb-4">Ampeln sind wie elterliche Ratschläge: manchmal befolgt, manchmal ignoriert, immer verhandelbar. Nachts, wenn kein Polizist in der Nähe ist, ist es im Grunde ein Roulettetisch. Tipp für ausländische Fahrer: Sei nicht die einsame Seele, die an einer roten Ampel stehen bleibt, während die ganze Stadt wie eine Flut an dir vorbeiströmt. Fahre klug, nicht starr.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">4. Kühe sind Straßenkönige. Verbeuge dich oder werde anders gesegnet.</h3>
+<p class="mb-4">Eine Kuh auf der Straße ist kein Verkehrsproblem. Es ist ein spiritueller Kontrollpunkt. Sie liegen herum, wiederkäuen und befehligen den Verkehr wie Zen-Meister. Kein Hupen, keine Eile – nur stilles Rinderurteil.</p>
+<p class="mb-4">Besonders Bullen verstehen keinen Spaß. Vermeide Augenkontakt und fahre mit Demut um sie herum.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">5. Fußgänger: Indiens Endgegner-Level</h3>
+<p class="mb-4">Zebrastreifen? Optional. Logik? Fließend. Fußgänger tauchen überall auf, oft mitten auf der Straße, mitten im Gespräch, mitten im Biryani. Bonuspunkte für das Überqueren, während man einen Karren voller Jackfrucht schiebt oder eine Leiter trägt.</p>
+<p class="mb-4">Bleib wachsam für plötzliche Bewegungen – und manchmal plötzliche Stille.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">6. Bremsschwellen: Indiens Weltraumprogramm</h3>
+<p class="mb-4">Nicht markiert, überdimensioniert und liebevoll handgefertigt – Bremsschwellen sind hier eher emotional als funktional. Wenn du eine zu schnell triffst, erreichst du vorübergehendes Abheben und spirituelles Erwachen. Achte auf Hinweise: ein zufälliger Kieshaufen, ein langsamer werdendes Auto voraus oder Einheimische, die mit ihren Handys lächeln.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">7. Überholen: Der Nationalsport</h3>
+<p class="mb-4">Wer braucht Spiegel oder klare Sichtlinien? Überholen wird in Indien von links, rechts, seitwärts oder emotional gemacht. Du wirst oft drei Fahrzeuge, eine Kuh und eine Hochzeitsband sehen, die versuchen, auf einer einspurigen Straße synchron zu überholen. Lächle und halte deine Linie. Das Chaos wird sich um dich herum teilen.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">8. Nachtfahrten: Wähle dein eigenes Abenteuer (Aber tu es nicht)</h3>
+<p class="mb-4">Viele Fahrzeuge benutzen keine Scheinwerfer. Andere lassen sie auf Fernlicht. Und manche bevorzugen den Stealth-Modus. Füge streunende Hunde, Schlaglöcher, Nebel und Tempelprozessionen hinzu… und du hast ein echtes Horrorspiel. Wenn du nicht absolut musst, vermeide Nachtfahrten. Abendessen bei Kerzenschein sind sicherer als Autobahnen bei Kerzenschein.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">9. Regen = Sofortiges Rutschen & Überraschende Stadtplanung</h3>
+<p class="mb-4">Indische Monsune sind magisch – bis sie ganze Straßen auslöschen. Asphalt verschwindet. Schlaglöcher vermehren sich wie Monsunpilze. Was einst eine Hauptstraße war, wird zu einer schlammigen Erinnerung. Reparaturzeitpläne reichen von „wir arbeiten daran“ bis „warte auf das Budget des nächsten Jahres“.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">10. Straßenschilder existieren. Meist zur Dekoration.</h3>
+<p class="mb-4">„Fahren Sie vorsichtig.“ „Trinken Sie nicht und fahren Sie nicht.“ „Besser spät als nie.“ …alles wunderschön auf verrostete Tafeln gemalt, die niemand liest. Die meisten Schilder sind durch Bäume, Drähte oder hoffnungsvolle Wahlplakate verdeckt.</p>
+<p class="mb-4">Verlass dich nicht auf Beschilderung. Verlass dich auf das Fahrzeug vor dir. Und vielleicht die Kuh.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">10½. Bonus: Mobile Büros, jetzt auf zwei Rädern</h3>
+<p class="mb-4">Du hast von Homeoffice gehört. Jetzt erlebe Working From Bike. Ja, wir haben Techies gesehen, die Zoom-Anrufe vom Soziussitz eines fahrenden Rollers entgegennahmen, Laptops raus, AirPods drin, tippend, während sie Rikschas auswichen. Multitasking-Level: Indische IT. Wenn jemand abgelenkt wirkt, debuggt er wahrscheinlich einen Server, während er als Sozius Milch kaufen fährt.</p>
+
+<h3 class="text-xl font-bold mt-6 mb-2">Aber im Ernst — Umarme das Chaos, fahre mit Herz</h3>
+<p class="mb-4">Fahren in Indien ist teils Theater, teils Meditation, teils Videospiel. Es mag anfangs überwältigend erscheinen, aber mit der richtigen Führung — und ein bisschen Hingabe — wird es zu etwas ganz anderem: Flow.</p>
+<p class="mb-4">Bei Slow Moto Tours sorgen wir dafür:</p>
+<ul class="list-disc pl-5 mb-4">
+<li>Du wirst eingewiesen, nicht verwirrt</li>
+<li>Du wirst geführt, nicht getrieben</li>
+<li>Du erlebst Indien, fährst nicht nur durch</li>
+</ul>
+<p class="mb-4">Wir unterstützen dich mit:</p>
+<ul class="list-disc pl-5 mb-4">
+<li>Vorbereiteten Royal Enfields</li>
+<li>Lokalen Road Captains und Support-Crew</li>
+<li>Kleinen Gruppen, flexiblem Tempo</li>
+<li>Eingebauten Pausen für Chai und Lachen am Straßenrand</li>
+</ul>
+
+<h3 class="text-xl font-bold mt-6 mb-2">Bereit, das lebende Biest namens indischer Verkehr zu reiten?</h3>
+<p class="mb-4">Komm und fahre mit uns. Komm und lache mit uns. Komm und hebe bei dieser unerwarteten Bremsschwelle leicht ab.</p>
         `
     },
     {
@@ -103,6 +172,27 @@ export const blogPosts: BlogPost[] = [
 </ul>
 <p class="mb-4">Exploring different landscapes on a motorbike offers a sense of freedom and adventure that few other experiences can match. Our tours in South India provide the perfect opportunity to discover this for yourself. We are excited to welcome you on our Diwali season tour and to share the beauty of southern India with you during this festive season.</p>
 <p class="mb-4">We look forward to riding with you and making unforgettable memories on and off the road.</p>
+        `,
+        titleDe: "Saisonstart - Vom Ha Giang Loop zu unserer Diwali-Tour",
+        excerptDe: "Unsere kommende Saison beginnt mit unserer ersten Tour im Oktober, perfekt abgestimmt auf Diwali, das Lichterfest.",
+        contentDe: `
+<p class="mb-4">Pratish war in Vietnam auf dem berühmten Ha Giang Loop und teilt seine Eindrücke in diesem Blogpost.</p>
+<p class="mb-4">Der Ha Giang Loop im Norden Vietnams ist eine Traumroute für jeden Motorradliebhaber. Für mich war es nicht anders. Nach monatelanger Recherche begab ich mich im April dieses Jahres endlich auf diese lang ersehnte Reise. Der Ha Giang Loop bietet einen einzigartigen Einblick in Vietnam, weit entfernt von den geschäftigen Städten Hanoi und Ho-Chi-Minh-Stadt.</p>
+<p class="mb-4">Für jemanden, der das operative Geschäft vor Ort für Slow Moto Tours leitet, war dies mehr als nur ein persönliches Abenteuer. Es war eine Gelegenheit, Tipps aus der Ha Giang Tour-Erfahrung zu sammeln und zu beobachten. Aber noch wichtiger war, dass ich mich entspannen und die Fahrt als Gast genießen konnte, ohne mich um die Logistik kümmern zu müssen – eine Perspektive, die für jemanden im Tourismusgeschäft von unschätzbarem Wert ist.</p>
+<p class="mb-4">Die 3-tägige Tour, die etwa 300 Kilometer abdeckte, führte uns durch einige der atemberaubendsten Landschaften, die Vietnam zu bieten hat – kurvenreiche Bergstraßen, ruhige Täler und ländliche Dörfer. Unsere Gruppe bestand aus etwa 20 Fahrern, wobei sich die meisten für die Soziusfahrt hinter einheimischen Fahrern (die Easy-Rider-Option) entschieden, während einige wenige alleine fuhren. Da unser Gepäck hinten auf den Rollern festgebunden war, packten wir alle minimalistisch und trugen nur das Nötigste bei uns.</p>
+<p class="mb-4">Während der Tourkapitän Englisch sprach, machte das begrenzte Englisch der Fahrer die Kommunikation manchmal schwierig. Am zweiten Tag hatte eines unserer Motorräder an einem abgelegenen Ort eine Panne, ohne dass sofortige Unterstützung verfügbar war. Glücklicherweise konnten wir die Situation mit Hilfe einiger Selbstfahrer-Roller in unserer Gruppe bewältigen, und am nächsten Tag wurde ein Ersatzmotorrad organisiert. Als Unterkunft übernachteten wir in lokalen Gastfamilien mit Schlafsaal-Einrichtungen, die eine engere Verbindung zur lokalen Kultur boten, aber nicht die Privatsphäre und den Komfort hatten, den manche vielleicht bevorzugen.</p>
+<p class="mb-4">Am Ende der Tour hatte ich neue Freunde gefunden und eine Seite Vietnams gesehen, die man als typischer Tourist unmöglich erleben könnte. Während der Ha Giang Loop auch mit einem Vierradfahrzeug gemacht werden kann, gibt es nichts Vergleichbares, als ihn auf einem Roller oder Motorrad zu machen.</p>
+<p class="mb-4">Unsere kommende Saison beginnt mit unserer ersten Tour vom 28. Oktober bis 2. November, perfekt abgestimmt auf Diwali, das Lichterfest. Dies wird ein einzigartiges Erlebnis für unsere Gäste sein, da wir durch die atemberaubenden Landschaften von Kerala und Tamil Nadu fahren.</p>
+<p class="mb-4">Die sorgfältig kuratierte Route, die sich über etwa 500 Kilometer erstreckt, führt uns durch einige der besten Landschaften, die Südindien zu bieten hat. Wir fahren durch typisch indische Städte, navigieren über kurvenreiche Bergstraßen und passieren ländliche Dörfer und bieten so über vier Tage ein abwechslungsreiches und immersives Fahrerlebnis.</p>
+<ul class="list-disc pl-5 mb-4">
+<li class="mb-2"><strong>Persönliches Erlebnis:</strong> Wir begrenzen unsere Gruppengröße auf maximal 6 Motorräder (plus 2 für Jo und mich), um sicherzustellen, dass jeder Fahrer individuelle Aufmerksamkeit und Anleitung erhält, was ein intimeres und angenehmeres Erlebnis schafft.</li>
+<li class="mb-2"><strong>Kulturelles Eintauchen:</strong> Während der Fahrt machen wir Pausen, um das authentische indische Energiegetränk Chai in lokalen Restaurants zu genießen, zusammen mit berühmten Tee-Snacks. Unsere Route ist so konzipiert, dass du in die lokale Kultur eintauchst, abseits der typischen Touristenpfade.</li>
+<li class="mb-2"><strong>Einzigartige Unterkünfte:</strong> Unsere Unterkünfte sind sorgfältig ausgewählt, um nach einem Tag auf dem Motorrad einen friedlichen Rückzugsort zu bieten. Ob Aufenthalt am Strand, ein Versteck im Wald oder ein Rückzugsort auf einer Plantage, jeder Ort bietet eine einzigartige und entspannende Umgebung. Du kannst dich bei einem Bad im Fluss oder im Swimmingpool entspannen und dich mit köstlicher lokaler Küche verwöhnen lassen.</li>
+<li class="mb-2"><strong>Umfassende Unterstützung:</strong> Jo und ich fahren auf unseren Motorrädern mit dir mit, begleitet von einem Servicewagen und einem engagierten Mechaniker, die während der gesamten Tour für Unterstützung zur Verfügung stehen. Dies stellt sicher, dass unvorhergesehene Probleme schnell behoben werden, damit du dich auf die Fahrt und das Erlebnis konzentrieren kannst.</li>
+<li class="mb-2"><strong>Verlängerte Entspannung:</strong> Unsere Gäste checken einen Tag vor Beginn der Tour ein und einen Tag danach aus, was ihnen genügend Zeit gibt, sich zu entspannen, zu akklimatisieren und sich auf die bevorstehende Reise vorzubereiten.</li>
+</ul>
+<p class="mb-4">Das Erkunden verschiedener Landschaften auf einem Motorrad bietet ein Gefühl von Freiheit und Abenteuer, das nur wenige andere Erlebnisse erreichen können. Unsere Touren in Südindien bieten die perfekte Gelegenheit, dies selbst zu entdecken. Wir freuen uns darauf, dich auf unserer Diwali-Saison-Tour willkommen zu heißen und die Schönheit Südindiens während dieser festlichen Jahreszeit mit dir zu teilen.</p>
+<p class="mb-4">Wir freuen uns darauf, mit dir zu fahren und unvergessliche Erinnerungen auf und neben der Straße zu schaffen.</p>
         `
     },
     {
@@ -125,6 +215,24 @@ export const blogPosts: BlogPost[] = [
 <p class="mb-4">Overall, it was a very enriching experience and, above all, great fun. We witnessed our meticulous planning come to fruition while also identifying areas for improvement. Our riders left with cherished memories of their Indian adventure, instilling confidence in our Crew and our future endeavours.</p>
 <p class="mb-4">Even before I could finish the question to our Riders and our Crew “If they would do it ag…?”, came the emphatic reply “YES!!!”</p>
 <p class="mb-4">And personally, I can hardly wait until we hit the road again.</p>
+<p class="mb-4">Pratish</p>
+        `,
+        titleDe: "Die Eröffnung der Straßen nach Chirakkal",
+        excerptDe: "Als wir durch die belebten Straßen von Kochi fuhren, füllte eine Mischung aus Aufregung und Besorgnis meinen Geist. Würde alles nach Plan laufen?",
+        contentDe: `
+<p class="mb-4">Haben wir hart genug gearbeitet, um unseren Fahrern ein makelloses Erlebnis zu bieten? Und so kam der Moment, und wir begaben uns auf unsere lang ersehnte Eröffnungstour „The Roads to Chirakkal“.</p>
+<p class="mb-4">Drei Fahrer aus Österreich schlossen sich uns für diese Testtour an, was einen bedeutenden Meilenstein markierte.</p>
+<p class="mb-4">Nach Monaten sorgfältiger Planung und Vorbereitungen war dies unsere Gelegenheit, unser Angebot basierend auf ihrem wertvollen Feedback zu verfeinern.</p>
+<p class="mb-4">Vor dem eigentlichen Start hatten unsere Teilnehmer die Möglichkeit, sich an die Motorräder zu gewöhnen und den indischen Verkehr aus erster Hand zu erleben.</p>
+<p class="mb-4">Mit unseren Fahrern an unserer Seite navigierten wir an einem schwülen Nachmittag durch Kochi. Einer von ihnen hatte bereits Motorraderfahrung in Südostasien, während die anderen beiden zum ersten Mal nach Asien reisten. Keiner unserer Fahrer war jemals zuvor Motorrad in Indien gefahren, aber sie stellten sich den einzigartigen Herausforderungen des indischen Verkehrs mutig.</p>
+<p class="mb-4">Am Startort, einem wunderschönen Strandresort, nahm unser Enfield-Mechaniker letzte Anpassungen an den Motorrädern vor und passte sogar einige Einstellungen an die Vorlieben unserer Fahrer an. Am Abend versammelten wir uns, um uns kennenzulernen, die Routen und die indische Straßenetikette zu besprechen und etwaige Bedenken unserer Fahrer auszuräumen. Aufregung lag in der Luft, als wir uns auf den Start der Fahrt am nächsten Tag freuten, und alle zogen sich früh zurück, um eine gute Nachtruhe zu gewährleisten.</p>
+<p class="mb-4">An einem angenehmen Morgen machten wir uns auf den Weg, wobei Jo die Gruppe anführte und ich das Schlusslicht bildete, begleitet vom Servicewagen, der unser Gepäck, wichtige Vorräte und natürlich unseren Mechaniker transportierte.</p>
+<p class="mb-4">Zum ersten Mal so zu fahren war etwas ganz Besonderes und man konnte die Freude und Aufregung aller spüren. Wir cruisten durch Hunderte von Kurven, erklommen Dschungelberge über unzählige Haarnadelkurven, eroberten die Ebenen, und nach der ersten fünftägigen Etappe durch diese atemberaubende Landschaft kamen wir in Kannur an, wo wir einen wohlverdienten Ruhetag am Meer genossen. Die Aussicht auf das Arabische Meer und die bezaubernden Sonnenuntergänge waren wirklich faszinierend.</p>
+<p class="mb-4">Als wir uns nach dieser Pause langsam auf den Rückweg nach Kochi machten, hatten wir sogar das Glück, unterwegs Elefanten zu sehen. Obwohl wir zwei kleinere Defekte an den Motorrädern hatten, bewältigte unser geschickter Mechaniker sie mit Leichtigkeit und wir konnten unsere Fahrt ohne nennenswerte Verzögerungen fortsetzen. Jeden Abend führten wir Diskussionen beim Abendessen, reflektierten über die Fahrt des Tages und suchten nach Verbesserungsmöglichkeiten.</p>
+<p class="mb-4">Während ich dies schreibe, möchte ich unseren allerbesten „Testkunden“ ein großes Dankeschön aussprechen, die uns nicht nur ständig ihr Feedback gaben, sondern auch fantastische Begleiter auf und neben der Straße waren!</p>
+<p class="mb-4">Insgesamt war es eine sehr bereichernde Erfahrung und vor allem ein großer Spaß. Wir sahen, wie unsere sorgfältige Planung Früchte trug, während wir auch Bereiche mit Verbesserungspotenzial identifizierten. Unsere Fahrer reisten mit wertvollen Erinnerungen an ihr indisches Abenteuer ab und stärkten das Vertrauen in unsere Crew und unsere zukünftigen Unternehmungen.</p>
+<p class="mb-4">Noch bevor ich die Frage an unsere Fahrer und unsere Crew beenden konnte „Würden sie es wieder tu…?“, kam die nachdrückliche Antwort „JA!!!“</p>
+<p class="mb-4">Und ich persönlich kann es kaum erwarten, bis wir wieder auf die Straße gehen.</p>
 <p class="mb-4">Pratish</p>
         `
     },
@@ -153,6 +261,28 @@ export const blogPosts: BlogPost[] = [
 <p class="mb-4">Suddenly, we could hardly believe our luck, the submission system seemed to work. And as I would not have expected anything else from an AI, only hours later in our email inboxes were the incorporation documents with which I could finally go to the Indian Embassy in Vienna and two weeks later had my business visa stuck in my passport.</p>
 <p class="mb-4">So I have been in Kerala since October 2022 to put all the ideas of the past two years into practice. I’ll report on how we did in the next blog post.</p>
 <p class="mb-4">Just so much in advance: everything is done, we have found the best routes (a dream come true for every rider), and secured the most beautiful accommodations. We are ready to go on an extraordinary journey with you!</p>
+        `,
+        titleDe: "Die einzige unmögliche Reise ist die, die du nie beginnst.",
+        excerptDe: "Bei starkem Regen und 14 Grad fuhren wir mit unseren Enfields durch die Berge, um eine Route zu erkunden, als mir für eine kurze Sekunde ein Gedanke durch den Kopf schoss.",
+        contentDe: `
+<p class="mb-4">„Ich fahre jetzt direkt zurück nach Kochi und mit dem nächsten Flugzeug nach Hause! Ich bin bereit aufzugeben!“</p>
+<p class="mb-4">Einen Moment später lachte ich laut über diese Überraschung, die mir mein Geist bot.</p>
+<p class="mb-4">Was für ein lächerlicher Gedanke. Wir sind nicht zwei Jahre lang diesen ganzen Weg gekommen, um von ein bisschen schlechtem Wetter in die Knie gezwungen zu werden. Ich dachte sofort an Pratish, der sein Motorrad nur wenige Meter hinter mir durch den prasselnden Regen bewegte. Der mich zwei unsichere Jahre lang beim Aufbau unserer Firma begleitet hatte und nun treu mit mir durch diese kalte und nasse Hölle fuhr.</p>
+<p class="mb-4">Während unserer letzten Pause hatte ich ihm erzählt, wie sehr wir Europäer uns über das Wetter aufregen können, und er sah mich eher verständnislos an und sagte, dass dies völlig irrelevant sei, da wir sowieso nichts dagegen tun könnten. Eine sehr indische Denkweise.</p>
+<p class="mb-4">Seit ich vor zwei Jahren die Idee für dieses Unternehmen hatte, mussten wir so viel Geduld und Ausdauer beweisen. Die Pandemie fesselte mich an Wien und auch Pratish in Indien konnte sich nicht so frei bewegen, wie er es gerne getan hätte. Zumindest konnte ich die Zwangspause nutzen, um an unserer Website zu basteln.</p>
+<p class="mb-4">Sobald es die Reisebeschränkungen zuließen, wollte ich mit einem Geschäftsvisum nach Indien reisen. Nur so konnte ich genug Zeit haben, um alle Aufgaben hier zu erledigen. Ein Touristenvisum hätte zeitlich nicht ausgereicht. Wie sich später herausstellte, gilt nur ein Geschäftsvisum als Wohnsitznachweis für mich in Indien vor den indischen Behörden, um weitere Dokumente unterschreiben zu können, z.B. um unser Firmenkonto zu eröffnen.</p>
+<p class="mb-4">Um ein Geschäftsvisum zu bekommen, musste ich jedoch bereits als Direktor unserer Firma registriert sein. Die Firmengründung hatte also oberste Priorität.</p>
+<p class="mb-4">So begannen wir den langen Weg zur Gründung einer Firma in Indien unter Beteiligung eines europäischen Bürgers. Andersherum wäre es sicher nicht einfacher gewesen. Und es war immer klar, dass unser Unternehmen seinen Sitz in Indien haben musste, um unseren zukünftigen Kunden und auch uns die bestmögliche Rechtssicherheit zu garantieren.</p>
+<p class="mb-4">Meine anfängliche Naivität, diese Firmengründung schnell und digital selbst bewältigen zu können, wurde durch die Komplexität des Unterfangens auf den Boden der bürokratischen Tatsachen zurückgeholt. Ohne einen Steuerberater in Indien, der uns durch diesen Prozess führt, würde nichts passieren. Also fand Pratish einen Steuerberater, der bereit war, sich der Sache anzunehmen. Und dann fand er den nächsten Steuerberater, weil der erste wegen Überforderung das Handtuch geworfen hatte.</p>
+<p class="mb-4">Wir hatten jetzt ein ganzes Team in diesem Büro, das uns half und uns immer wieder neue Aufgaben zu Unterschriften und Identitätsnachweisen stellte.</p>
+<p class="mb-4">In Wien ging ich oft von Notar zu Bezirksgericht zu Landgericht, um die von den indischen Behörden geforderte Beglaubigung (und Überbeglaubigung) meiner Unterschriften und Identitäts- und Wohnsitznachweise zu erhalten.</p>
+<p class="mb-4">Ich ließ eine amtlich beglaubigte Übersetzung meines österreichischen Meldezettels anfertigen und überbeglaubigen, nur um nach Einreichung bei den indischen Behörden gesagt zu bekommen, dass nur meine Handyrechnung als Wohnsitznachweis akzeptiert würde.</p>
+<p class="mb-4">Immer wieder wurden wir zurückgeworfen, während unser Anliegen immer dringender wurde.</p>
+<p class="mb-4">Alle Daten zur Firmengründung und die erforderlichen Anhänge werden über ein Webportal eingereicht. Nun, genau zu dieser Zeit beschlossen die indischen Behörden, dieses Portal von einer reinen PDF-Einreichung auf ein KI-basiertes System umzustellen. Viele Wochen lang war eine Einreichung aufgrund technischer Fehler schlichtweg nicht möglich, was wiederum unser Steuerberatungsteam fast zur Verzweiflung trieb.</p>
+<p class="mb-4">Denn alle Dokumente mussten gleichzeitig zur Gründung eingereicht werden und durften nicht älter als zwei Monate sein, was in diesem Prozess keine einfache Sache war. Tatsächlich war meine notariell beglaubigte und überbeglaubigte Handyrechnung dann auch wieder älter als zwei Monate, aber die Behörden begnügten sich kulanterweise mit den Beglaubigungen auf der alten Rechnung plus der blanken aktuellen Rechnung.</p>
+<p class="mb-4">Plötzlich konnten wir unser Glück kaum fassen, das Einreichungssystem schien zu funktionieren. Und wie ich es von einer KI nicht anders erwartet hätte, lagen nur Stunden später die Gründungsunterlagen in unseren E-Mail-Posteingängen, mit denen ich endlich zur indischen Botschaft in Wien gehen konnte und zwei Wochen später mein Geschäftsvisum im Pass kleben hatte.</p>
+<p class="mb-4">So bin ich seit Oktober 2022 in Kerala, um all die Ideen der letzten zwei Jahre in die Tat umzusetzen. Wie es uns dabei ergangen ist, berichte ich im nächsten Blogbeitrag.</p>
+<p class="mb-4">Nur so viel vorab: Es ist alles erledigt, wir haben die besten Routen gefunden (ein Traum für jeden Fahrer) und uns die schönsten Unterkünfte gesichert. Wir sind bereit, mit dir auf eine außergewöhnliche Reise zu gehen!</p>
         `
     }
 ];
