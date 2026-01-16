@@ -232,6 +232,7 @@ export const translations = {
         title: "Slow Moto Stories",
         subtitle: "Stories from the Slow Moto World. Dive into the exciting world of our adventure motorcycle trips in South India.",
         read_more: "READ MORE"
+    },
     footer: {
       explore: "Explore",
       stay_in_touch: "Stay in touch",
@@ -474,6 +475,7 @@ export const translations = {
         title: "Slow Moto Geschichten",
         subtitle: "Geschichten aus der Slow Moto Welt. Tauche ein in die aufregende Welt unserer Abenteuer-Motorradreisen in Südindien.",
         read_more: "WEITERLESEN"
+    },
     footer: {
       explore: "Entdecken",
       stay_in_touch: "Bleib in Kontakt",
