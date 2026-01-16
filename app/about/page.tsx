@@ -56,7 +56,7 @@ export default function AboutPage() {
                         <div className="relative">
                             <img src="https://slowmoto.tours/wp-content/uploads/Why-we-ride.webp" alt="Why we ride" className="rounded-2xl shadow-xl w-full" />
                             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg max-w-xs hidden md:block">
-                                <p className="text-secondary font-bold italic">"Riding slooow for peace of body and mind"</p>
+                                <p className="text-secondary font-bold italic">&quot;Riding slooow for peace of body and mind&quot;</p>
                             </div>
                         </div>
                     </section>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                                 <h3 className="text-xl font-bold uppercase mb-2">Aromal</h3>
                                 <div className="text-secondary text-sm font-bold mb-4">Royal Enfield Technician</div>
                                 <p className="text-sm opacity-70">
-                                    With profound knowledge of RE Bikes “The Moto Surgeon” keeps our Enfields fit and safe.
+                                    With profound knowledge of RE Bikes &ldquo;The Moto Surgeon&rdquo; keeps our Enfields fit and safe.
                                 </p>
                             </div>
 
@@ -85,7 +85,7 @@ export default function AboutPage() {
                                 <h3 className="text-xl font-bold uppercase mb-2">Jo</h3>
                                 <div className="text-secondary text-sm font-bold mb-4">Co-Founder & Road Captain</div>
                                 <p className="text-sm opacity-70">
-                                    “Driving coach for foreigners”. Leads our convoy resolutely and safely, constantly looking for chai stops.
+                                    &ldquo;Driving coach for foreigners&rdquo;. Leads our convoy resolutely and safely, constantly looking for chai stops.
                                 </p>
                             </div>
 

@@ -2,39 +2,44 @@
 
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
-
-const testimonials = [
-    {
-        name: "Oliver Pokorny",
-        text: "The most authentic way to see India. Jo and Pratish are incredible hosts who know every backroad and hidden gem.",
-        rating: 5,
-        image: "https://slowmoto.tours/wp-content/uploads/Oliver-Pokorny-Profile-Pic.webp"
-    },
-    {
-        name: "Peter Hoffman",
-        text: "Slow travel at its best. No rushing, just pure immersion into the culture and landscapes of Southern India.",
-        rating: 5,
-        image: "https://slowmoto.tours/wp-content/uploads/Peter-Hoffman-Profile-Pic.webp"
-    },
-    {
-        name: "Sarah Jenkins",
-        text: "The bikes were impecable and the routes were breathtaking. A once-in-a-lifetime experience I'll never forget.",
-        rating: 5,
-        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop"
-    }
-];
+import { useLanguage } from "@/components/LanguageProvider";
+import { translations } from "@/lib/translations";
 
 export default function Testimonials() {
+    const { language } = useLanguage();
+    const t = translations[language].home.testimonials;
+
+    const testimonialsData = [
+        {
+            name: "Oliver Pokorny",
+            text: t.t1,
+            rating: 5,
+            image: "https://slowmoto.tours/wp-content/uploads/Oliver-Pokorny-Profile-Pic.webp"
+        },
+        {
+            name: "Peter Hoffman",
+            text: t.t2,
+            rating: 5,
+            image: "https://slowmoto.tours/wp-content/uploads/Peter-Hoffman-Profile-Pic.webp"
+        },
+        {
+            name: "Sarah Jenkins",
+            text: t.t3,
+            rating: 5,
+            image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop"
+        }
+    ];
+
     return (
         <section className="py-24 bg-white relative">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-secondary text-lg font-bold uppercase tracking-widest mb-4">Riders Speak</h2>
-                    <h3 className="text-4xl font-bold text-dark uppercase">Testimonials</h3>
+                    <h2 className="text-secondary text-lg font-bold uppercase tracking-widest mb-4">{t.label}</h2>
+                    <h3 className="text-4xl font-bold text-dark uppercase">{t.title}</h3>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {testimonials.map((item, index) => (
+                    {testimonialsData.map((item, index) => (
                         <motion.div
                             key={item.name}
                             initial={{ opacity: 0, y: 30 }}
@@ -51,7 +56,7 @@ export default function Testimonials() {
                                 ))}
                             </div>
 
-                            <p className="text-dark/80 italic mb-8 relative z-10">"{item.text}"</p>
+                            <p className="text-dark/80 italic mb-8 relative z-10">&quot;{item.text}&quot;</p>
 
                             <div className="flex items-center gap-4">
                                 <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 border-2 border-white shadow-sm">

@@ -2,36 +2,39 @@
 
 import { motion } from "framer-motion";
 import { Heart, Shield, Users, Compass, Anchor } from "lucide-react";
-
-const values = [
-    {
-        icon: <Compass className="w-10 h-10" />,
-        title: "Authentic",
-        text: "True experiences off the beaten track."
-    },
-    {
-        icon: <Heart className="w-10 h-10" />,
-        title: "Passionate",
-        text: "We love what we do and it shows."
-    },
-    {
-        icon: <Anchor className="w-10 h-10" />,
-        title: "Reliable",
-        text: "Safe and well-maintained Royal Enfields."
-    },
-    {
-        icon: <Shield className="w-10 h-10" />,
-        title: "Safe",
-        text: "Experienced guides and mechanics on every trip."
-    },
-    {
-        icon: <Users className="w-10 h-10" />,
-        title: "Small Groups",
-        text: "Personal attention and local immersion."
-    }
-];
+import { useLanguage } from "./LanguageProvider";
 
 export default function Values() {
+    const { t } = useLanguage();
+
+    const values = [
+        {
+            icon: <Compass className="w-10 h-10" />,
+            title: t("values.authentic.title"),
+            text: t("values.authentic.text")
+        },
+        {
+            icon: <Heart className="w-10 h-10" />,
+            title: t("values.passionate.title"),
+            text: t("values.passionate.text")
+        },
+        {
+            icon: <Anchor className="w-10 h-10" />,
+            title: t("values.reliable.title"),
+            text: t("values.reliable.text")
+        },
+        {
+            icon: <Shield className="w-10 h-10" />,
+            title: t("values.safe.title"),
+            text: t("values.safe.text")
+        },
+        {
+            icon: <Users className="w-10 h-10" />,
+            title: t("values.smallGroups.title"),
+            text: t("values.smallGroups.text")
+        }
+    ];
+
     return (
         <section className="py-24 bg-white/80 backdrop-blur-sm relative border-y border-gray-100">
             <div className="max-w-7xl mx-auto px-4">

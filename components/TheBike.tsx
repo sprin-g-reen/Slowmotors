@@ -1,29 +1,34 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useLanguage } from "@/components/LanguageProvider";
+import { translations } from "@/lib/translations";
 
 export default function TheBike() {
+    const { language } = useLanguage();
+    const t = translations[language].home.the_bike;
+
     return (
         <section className="py-24 bg-secondary/5 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div className="order-2 lg:order-1">
-                    <h2 className="text-primary text-lg font-bold uppercase tracking-widest mb-4">The Machine</h2>
-                    <h3 className="text-4xl md:text-5xl font-bold text-dark mb-8 uppercase">Royal Enfield</h3>
+                    <h2 className="text-primary text-lg font-bold uppercase tracking-widest mb-4">{t.label}</h2>
+                    <h3 className="text-4xl md:text-5xl font-bold text-dark mb-8 uppercase">{t.title}</h3>
                     <p className="text-xl text-dark/80 leading-relaxed mb-6">
-                        Riding a Royal Enfield isn't just about getting from A to B; it's about the feel, the sound, and the connection to the machine. These legendary bikes are perfect for the diverse terrain of India.
+                        {t.desc}
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
                         <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                            <h4 className="font-bold text-primary mb-2 uppercase tracking-tight">Himalayan</h4>
-                            <p className="text-sm opacity-70">Rugged, versatile, and ready for any adventure. Ideal for mountain passes and rough tracks.</p>
+                            <h4 className="font-bold text-primary mb-2 uppercase tracking-tight">{t.himalayan.title}</h4>
+                            <p className="text-sm opacity-70">{t.himalayan.desc}</p>
                         </div>
                         <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-                            <h4 className="font-bold text-primary mb-2 uppercase tracking-tight">Classic 500</h4>
-                            <p className="text-sm opacity-70">The quintessential Enfield experience. Timeless style, thumping heart, and soul.</p>
+                            <h4 className="font-bold text-primary mb-2 uppercase tracking-tight">{t.classic_500.title}</h4>
+                            <p className="text-sm opacity-70">{t.classic_500.desc}</p>
                         </div>
                     </div>
                     <p className="text-lg text-dark/70 font-medium italic mb-8">
-                        "We maintain our fleet to the highest standards, ensuring reliability on every mile of your journey."
+                        &quot;{t.quote}&quot;
                     </p>
                 </div>
 

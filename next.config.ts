@@ -16,10 +16,9 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    // @ts-ignore - Specific experimental property for dev environments
+    // @ts-expect-error - Specific experimental property for dev environments
     allowedDevOrigins: ["192.168.131.176:3000"],
   },
 };
 
 export default nextConfig;
-

@@ -53,7 +53,7 @@ export default function PricingModal({ isOpen, onClose }: PricingModalProps) {
                         <div className="text-3xl font-bold text-primary mb-4">€ 150,-</div>
                         <p className="text-sm text-dark/70 leading-relaxed">
                             supplement per person.<br />
-                            Prices include 5% Indian "Goods and Service Tax".
+                            Prices include 5% Indian &quot;Goods and Service Tax&quot;.
                         </p>
                     </div>
                 </div>
