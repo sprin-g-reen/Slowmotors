@@ -12,12 +12,8 @@
   ? allowedDevOrigins (invalid experimental key)
 
 ✓ Starting...
-✓ Ready in 1620ms
-○ Compiling /holidays ...
- GET /holidays 200 in 9.0s (compile: 8.5s, render: 477ms)
- GET /terms-services 200 in 1577ms (compile: 1445ms, render: 132ms)
- GET /website-terms 200 in 1131ms (compile: 1041ms, render: 90ms)
- GET /privacy-policy 200 in 1410ms (compile: 1315ms, render: 95ms)
- GET /imprint 200 in 1172ms (compile: 1028ms, render: 144ms)
- GET / 200 in 1463ms (compile: 1222ms, render: 240ms)
- GET /holidays 200 in 147ms (compile: 10ms, render: 137ms)
+✓ Ready in 1861ms
+○ Compiling /blog ...
+ GET /blog 200 in 6.7s (compile: 6.2s, render: 428ms)
+ GET /blog 200 in 99ms (compile: 7ms, render: 92ms)
+[?25h
