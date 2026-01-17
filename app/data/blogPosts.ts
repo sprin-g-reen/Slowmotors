@@ -8,6 +8,7 @@ export interface BlogPost {
     titleDe?: string;
     excerptDe?: string;
     contentDe?: string;
+    youtubeId?: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -201,6 +202,7 @@ export const blogPosts: BlogPost[] = [
         date: "Jan 01, 2023",
         excerpt: "As we rode through the bustling streets of Kochi, a mix of excitement and apprehension filled my mind. Would everything go according to plan?",
         image: "https://slowmoto.tours/wp-content/uploads/Collage-01012023.webp",
+        youtubeId: "L8oRHYpAEO0",
         content: `
 <p class="mb-4">Did we work hard enough to ensure a flawless experience for our riders? And so, the moment arrived, and we embarked on our much-anticipated opening tour “The Roads to Chirakkal.”</p>
 <p class="mb-4">Three Riders from Austria joined us for this test tour, marking a significant milestone.</p>
