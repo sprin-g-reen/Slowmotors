@@ -241,7 +241,11 @@ export const translations = {
       join: "JOIN",
       rights: "Slow Moto Tours. All rights reserved.",
       privacy: "Privacy Policy",
-      terms: "Terms & Conditions"
+      terms: "Terms & Conditions",
+      terms_services: "Terms and Conditions of Services",
+      website_terms: "Website Terms and Conditions",
+      cookie_privacy: "Cookie and Privacy Policy",
+      imprint: "Imprint and Disclaimer"
     }
   },
   de: {
@@ -484,7 +488,11 @@ export const translations = {
       join: "ANMELDEN",
       rights: "Slow Moto Tours. Alle Rechte vorbehalten.",
       privacy: "Datenschutzerklärung",
-      terms: "AGB"
+      terms: "AGB",
+      terms_services: "Allgemeine Geschäftsbedingungen",
+      website_terms: "Webseiten-Nutzungsbedingungen",
+      cookie_privacy: "Cookie- und Datenschutzrichtlinie",
+      imprint: "Impressum und Haftungsausschluss"
     }
   },
 };
