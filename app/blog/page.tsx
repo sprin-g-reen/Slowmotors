@@ -28,12 +28,24 @@ export default function BlogPage() {
 
                              return (
                                 <div key={post.title} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden flex flex-col h-full">
-                                    <div className="h-48 overflow-hidden">
-                                        <img
-                                            src={post.image}
-                                            alt={post.title}
-                                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                                        />
+                                    <div className="h-48 overflow-hidden relative group">
+                                        {post.youtubeId ? (
+                                            <div className="w-full h-full flex justify-center bg-black">
+                                                <iframe
+                                                    src={`https://www.youtube.com/embed/${post.youtubeId}?playlist=${post.youtubeId}&loop=1&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1`}
+                                                    title={title}
+                                                    className="h-full aspect-[9/16] pointer-events-none"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowFullScreen
+                                                />
+                                            </div>
+                                        ) : (
+                                            <img
+                                                src={post.image}
+                                                alt={post.title}
+                                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                            />
+                                        )}
                                     </div>
                                     <div className="p-8 flex flex-col flex-grow">
                                         <div className="text-secondary text-sm font-bold uppercase mb-2">{post.date}</div>
