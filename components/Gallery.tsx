@@ -1,11 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { translations } from "@/lib/translations";
 
 const galleryImages = [
-    "https://slowmoto.tours/wp-content/uploads/Rustic-Ox-Cart.webp",
+    "https://slowmoto.tours/wp-content/uploads/Cherai-Beach-Front.webp",
     "https://slowmoto.tours/wp-content/uploads/Backwaters.webp",
     "https://slowmoto.tours/wp-content/uploads/Virgin-Beach.webp",
     "https://slowmoto.tours/wp-content/uploads/Country-Road-Yellow-Blossoms.webp",
@@ -37,6 +39,7 @@ const galleryImages = [
 export default function Gallery() {
     const { language } = useLanguage();
     const t = translations[language].home.gallery;
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     return (
         <section className="py-24 bg-white">
@@ -55,6 +58,7 @@ export default function Gallery() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.05 }}
                             className="aspect-square relative overflow-hidden rounded-lg cursor-pointer group"
+                            onClick={() => setSelectedImage(src)}
                         >
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors z-10" />
                             <img
@@ -67,6 +71,46 @@ export default function Gallery() {
                     ))}
                 </div>
             </div>
+
+            {/* Lightbox */}
+            <AnimatePresence>
+                {selectedImage && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImage(null)}
+                        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 cursor-zoom-out"
+                    >
+                        <motion.button
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className="absolute top-6 right-6 text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors z-[110]"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setSelectedImage(null);
+                            }}
+                        >
+                            <X size={32} />
+                        </motion.button>
+
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                            className="relative max-w-5xl w-full h-full flex items-center justify-center"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <img
+                                src={selectedImage}
+                                alt="Enlarged Gallery Image"
+                                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl cursor-default"
+                            />
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }

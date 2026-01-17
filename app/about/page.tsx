@@ -1,14 +1,24 @@
 "use client";
-
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SubPageLayout from "@/components/SubPageLayout";
 import { useLanguage } from "@/components/LanguageProvider";
 import { translations } from "@/lib/translations";
+import CrewDetailModal from "@/components/CrewDetailModal";
 
 export default function AboutPage() {
     const { language } = useLanguage();
     const t = translations[language].about;
+
+    const [selectedMember, setSelectedMember] = useState<any>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openMemberModal = (member: any) => {
+        if (!member.paragraphs) return; // Only open for members with detailed info (Jo & Pratish)
+        setSelectedMember(member);
+        setIsModalOpen(true);
+    };
 
     return (
         <>
@@ -78,7 +88,10 @@ export default function AboutPage() {
                             </div>
 
                             {/* Jo */}
-                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                            <div
+                                className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center cursor-pointer hover:shadow-md transition-shadow"
+                                onClick={() => openMemberModal(t.crew.jo)}
+                            >
                                 <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-secondary/20">
                                     <img src="https://slowmoto.tours/wp-content/uploads/Jo-blessed.webp" alt="Jo" className="w-full h-full object-cover" />
                                 </div>
@@ -90,7 +103,10 @@ export default function AboutPage() {
                             </div>
 
                             {/* Pratish */}
-                            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                            <div
+                                className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center cursor-pointer hover:shadow-md transition-shadow"
+                                onClick={() => openMemberModal(t.crew.pratish)}
+                            >
                                 <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-secondary/20">
                                     <img src="https://slowmoto.tours/wp-content/uploads/pP-with-pink-drink.webp" alt="Pratish" className="w-full h-full object-cover" />
                                 </div>
@@ -113,6 +129,12 @@ export default function AboutPage() {
                                 </p>
                             </div>
                         </div>
+
+                        <CrewDetailModal
+                            isOpen={isModalOpen}
+                            onClose={() => setIsModalOpen(false)}
+                            member={selectedMember}
+                        />
                     </section>
 
                     {/* Our Story */}
@@ -131,17 +153,17 @@ export default function AboutPage() {
                         </div>
                     </section>
 
-                     {/* Partners */}
-                     <section className="text-center">
+                    {/* Partners */}
+                    <section className="text-center">
                         <h2 className="text-3xl font-bold mb-8 uppercase text-primary">{t.partners.title}</h2>
                         <div className="max-w-3xl mx-auto flex flex-col items-center">
-                             <img src="https://slowmoto.tours/wp-content/uploads/RE-Tours-Logo.webp" alt="Royal Enfield Tours" className="h-24 mb-6" />
-                             <h3 className="text-xl font-bold mb-4">{t.partners.sub_title}</h3>
-                             <p className="text-dark/80">
+                            <img src="https://slowmoto.tours/wp-content/uploads/RE-Tours-Logo.webp" alt="Royal Enfield Tours" className="h-24 mb-6" />
+                            <h3 className="text-xl font-bold mb-4">{t.partners.sub_title}</h3>
+                            <p className="text-dark/80">
                                 {t.partners.desc}
-                             </p>
+                            </p>
                         </div>
-                     </section>
+                    </section>
 
                 </div>
             </SubPageLayout>

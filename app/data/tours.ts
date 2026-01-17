@@ -36,6 +36,13 @@ export interface Tour {
     question: string;
     answer: string;
   }[];
+  dates?: {
+    start: string;
+    end: string;
+    availability: string;
+    availabilityDe?: string;
+    status: 'available' | 'warning' | 'full';
+  }[];
 }
 
 export interface TranslatedTour extends Tour {
@@ -185,13 +192,13 @@ export const TOURS_DATA: TranslatedTour[] = [
       pillionNote: "Short stretches may be unsuitable for pillion riders. In such cases, pillion riders have a place in our support vehicle."
     },
     quickFactsDe: {
-        startEnd: "Kochi, Kerala, Indien",
-        tourDuration: "6 Tage / 5 Nächte / 4 Tage auf der Enfield",
-        totalDistance: "480 km",
-        averageRiding: "4,5 Stunden/Tag inklusive Pausen",
-        bikesMax: "Max. 6 Motorräder",
-        airport: "Kochi / Cochin / COK",
-        pillionNote: "Kurze Strecken können für Soziusfahrer ungeeignet sein. In solchen Fällen haben Soziusfahrer einen Platz in unserem Begleitfahrzeug."
+      startEnd: "Kochi, Kerala, Indien",
+      tourDuration: "6 Tage / 5 Nächte / 4 Tage auf der Enfield",
+      totalDistance: "480 km",
+      averageRiding: "4,5 Stunden/Tag inklusive Pausen",
+      bikesMax: "Max. 6 Motorräder",
+      airport: "Kochi / Cochin / COK",
+      pillionNote: "Kurze Strecken können für Soziusfahrer ungeeignet sein. In solchen Fällen haben Soziusfahrer einen Platz in unserem Begleitfahrzeug."
     },
     included: [
       "Royal Enfield Classic 350 motorbike including gas and kilometers",
@@ -207,17 +214,17 @@ export const TOURS_DATA: TranslatedTour[] = [
       "Our gratitude for booking with us :-)"
     ],
     includedDe: [
-        "Royal Enfield Classic 350 Motorrad inklusive Benzin und Kilometer",
-        "Englischsprachiger Reiseleiter und Support-Crew",
-        "Ein engagierter Royal Enfield Mechaniker ist die ganze Zeit bei uns",
-        "Begleitwagen für Gepäck und Ersatzausrüstung",
-        "Unterkunft (Doppelzimmer oder Einzelzimmer je nach Buchung)",
-        "Frühstück, Mittag- und Abendessen",
-        "Alle alkoholfreien Getränke",
-        "Versicherung für das Motorrad (deckt Sachschäden am Motorrad sowie Sach- und Personenschäden an Dritten)",
-        "Eintrittsgelder für Sehenswürdigkeiten, Naturschutzgebiete, Mautgebühren",
-        "Ozeane, Flüsse, Schwimmbäder",
-        "Unser Dank für deine Buchung :-)"
+      "Royal Enfield Classic 350 Motorrad inklusive Benzin und Kilometer",
+      "Englischsprachiger Reiseleiter und Support-Crew",
+      "Ein engagierter Royal Enfield Mechaniker ist die ganze Zeit bei uns",
+      "Begleitwagen für Gepäck und Ersatzausrüstung",
+      "Unterkunft (Doppelzimmer oder Einzelzimmer je nach Buchung)",
+      "Frühstück, Mittag- und Abendessen",
+      "Alle alkoholfreien Getränke",
+      "Versicherung für das Motorrad (deckt Sachschäden am Motorrad sowie Sach- und Personenschäden an Dritten)",
+      "Eintrittsgelder für Sehenswürdigkeiten, Naturschutzgebiete, Mautgebühren",
+      "Ozeane, Flüsse, Schwimmbäder",
+      "Unser Dank für deine Buchung :-)"
     ],
     requirements: [
       "valid passport",
@@ -227,11 +234,11 @@ export const TOURS_DATA: TranslatedTour[] = [
       "personal protective equipment (mandatory: helmet, proper shoes and gloves; highly recommended: protective clothing, raingear, dust protection, sunglasses and sun screen lotion)"
     ],
     requirementsDe: [
-        "gültiger Reisepass",
-        "Visum (erhalte dein offizielles Visum hier: https://indianvisaonline.gov.in)",
-        "gültiger internationaler Führerschein für 350ccm Motorräder",
-        "internationale Reiseversicherung (deckt Kosten für ambulante und stationäre Behandlung sowie verschriebene Medikamente bei akuter Krankheit oder Unfall im Ausland)",
-        "persönliche Schutzausrüstung (Pflicht: Helm, festes Schuhwerk und Handschuhe; dringend empfohlen: Schutzkleidung, Regenkleidung, Staubschutz, Sonnenbrille und Sonnencreme)"
+      "gültiger Reisepass",
+      "Visum (erhalte dein offizielles Visum hier: https://indianvisaonline.gov.in)",
+      "gültiger internationaler Führerschein für 350ccm Motorräder",
+      "internationale Reiseversicherung (deckt Kosten für ambulante und stationäre Behandlung sowie verschriebene Medikamente bei akuter Krankheit oder Unfall im Ausland)",
+      "persönliche Schutzausrüstung (Pflicht: Helm, festes Schuhwerk und Handschuhe; dringend empfohlen: Schutzkleidung, Regenkleidung, Staubschutz, Sonnenbrille und Sonnencreme)"
     ],
     faq: [
       {
@@ -264,35 +271,40 @@ export const TOURS_DATA: TranslatedTour[] = [
       }
     ],
     faqDe: [
-        {
-            question: "Gibt es WLAN?",
-            answer: "Einrichtungen wie Strom, WLAN und Wäscherei sind in den Unterkünften verfügbar."
-        },
-        {
-            question: "Ist es sicher?",
-            answer: "Informationen zur Sicherheit auf der Straße findest du in unserem Abschnitt „Sicherheit“. Ein Vorteil unserer geführten Touren ist, dass du dich darauf verlassen kannst, dass unsere vertrauenswürdigen Guides ein Auge auf dich haben. Wie überall auf der Welt kannst du mit vereinzelten Taschendieben und Betrügern rechnen. Aber anders als an anderen Orten werden sich die Einheimischen eher auf die Seite der Touristen stellen als auf die ihrer eigenen Leute. Malaria ist in Südindien kein Risiko. Es gibt große Mücken, aber die verursachen nichts als das übliche Jucken. Dengue-Fieber ist in Südindien endemisch, besonders während der Monsunzeit, daher sind gute Vorsichtsmaßnahmen wie starke Repellents und Netze unerlässlich."
-        },
-        {
-            question: "Wie wird das Wetter sein?",
-            answer: "Südindien liegt nur eine kurze Strecke vom Äquator entfernt und genießt daher ein tropisches Klima. Während der Winter Europa frieren lässt, sind wir in der Trockenzeit mit viel Sonnenschein und warmen Temperaturen in den tieferen Lagen ohne viel Regen oder Luftfeuchtigkeit. Die durchschnittliche Tagestemperatur liegt dort bei 28°C. Am heißesten Punkt des Tages kann die Temperatur auf bis zu 32°C steigen. Abende kühlen nach Sonnenuntergang auf angenehme 23°C ab. In den höheren Lagen auf unseren Routen liegen die Tagestemperaturen im Durchschnitt bei etwa 20 – 22 °C, während die Temperaturen nachts bis auf 9 °C sinken können. Bring also unbedingt auch warme Kleidung mit. Richtige Regenkleidung zum Überziehen sollte den Job erledigen. Die Wassertemperatur ist das ganze Jahr über angenehm hoch und mit 29°C sogar höher als die durchschnittliche Lufttemperatur!"
-        },
-        {
-            question: "Bin ich fit und erfahren genug?",
-            answer: "Wir möchten, dass unsere Fahrer fit genug sind, um 4-7 Stunden am Tag bei sonnigen Bedingungen zu fahren. Während Erfahrung mit langen Fahrten nicht zwingend erforderlich ist, ist es immer besser, wenn du ein paar hundert Kilometer Fahrt hinter dir hast. Bitte kläre mit deinem Arzt ab, ob du irgendwelche Vorerkrankungen hast."
-        },
-        {
-            question: "Wie sind die Straßenverhältnisse in Indien?",
-            answer: "Auf unserer Route werden wir über so ziemlich alles fahren, was unter Straßenoberflächen beschrieben werden kann. Wir gleiten über brandneue Bergkurven und cruisen über vierspurige Autobahnen, die abrupt auf schlaglochübersäte Landstraßen führen, begegnen engen Gassen in der Innenstadt sowie manövrieren langsam über Schotter- und Sandabschnitte. Mach dir keine Sorgen um das Handling der Motorräder, die Enfield ist genau für das breite Spektrum der indischen Straßenverhältnisse gebaut."
-        },
-        {
-            question: "Werde ich Magen-Darm-Erkrankungen bekommen?",
-            answer: "Biken macht mit Magenverstimmung keinen Spaß. Und während wir die Gesamtreaktion deines Systems auf indische Bedingungen nicht garantieren können, legen wir höchsten Wert auf hygienische Standards in den Küchen unserer Partner. Alle Zutaten sind frisch, mit Flaschenwasser gewaschen und kein ungares Essen berührt die Teller."
-        },
-        {
-            question: "Kann ich mein eigenes Motorrad mitbringen?",
-            answer: "Es hat viele Vorteile, wenn die ganze Gruppe das gleiche Motorrad fährt. Unsere Tour wird von einem Enfield-Mechaniker begleitet und wir sind mit den gängigsten Ersatzteilen ausgestattet. Auch in Bezug auf Sicherheit und Reisegeschwindigkeit ist es von großem Vorteil, denselben Karosserietyp und Motor in der ganzen Gruppe zu haben. Die Kosten für die Miete einer unserer Enfields sind im Preis inbegriffen. Wenn du die Fahrt jedoch auf deinem eigenen Motorrad machen möchtest, kontaktiere uns bitte."
-        }
-    ]
+      {
+        question: "Gibt es WLAN?",
+        answer: "Einrichtungen wie Strom, WLAN und Wäscherei sind in den Unterkünften verfügbar."
+      },
+      {
+        question: "Ist es sicher?",
+        answer: "Informationen zur Sicherheit auf der Straße findest du in unserem Abschnitt „Sicherheit“. Ein Vorteil unserer geführten Touren ist, dass du dich darauf verlassen kannst, dass unsere vertrauenswürdigen Guides ein Auge auf dich haben. Wie überall auf der Welt kannst du mit vereinzelten Taschendieben und Betrügern rechnen. Aber anders als an anderen Orten werden sich die Einheimischen eher auf die Seite der Touristen stellen als auf die ihrer eigenen Leute. Malaria ist in Südindien kein Risiko. Es gibt große Mücken, aber die verursachen nichts als das übliche Jucken. Dengue-Fieber ist in Südindien endemisch, besonders während der Monsunzeit, daher sind gute Vorsichtsmaßnahmen wie starke Repellents und Netze unerlässlich."
+      },
+      {
+        question: "Wie wird das Wetter sein?",
+        answer: "Südindien liegt nur eine kurze Strecke vom Äquator entfernt und genießt daher ein tropisches Klima. Während der Winter Europa frieren lässt, sind wir in der Trockenzeit mit viel Sonnenschein und warmen Temperaturen in den tieferen Lagen ohne viel Regen oder Luftfeuchtigkeit. Die durchschnittliche Tagestemperatur liegt dort bei 28°C. Am heißesten Punkt des Tages kann die Temperatur auf bis zu 32°C steigen. Abende kühlen nach Sonnenuntergang auf angenehme 23°C ab. In den höheren Lagen auf unseren Routen liegen die Tagestemperaturen im Durchschnitt bei etwa 20 – 22 °C, während die Temperaturen nachts bis auf 9 °C sinken können. Bring also unbedingt auch warme Kleidung mit. Richtige Regenkleidung zum Überziehen sollte den Job erledigen. Die Wassertemperatur ist das ganze Jahr über angenehm hoch und mit 29°C sogar höher als die durchschnittliche Lufttemperatur!"
+      },
+      {
+        question: "Bin ich fit und erfahren genug?",
+        answer: "Wir möchten, dass unsere Fahrer fit genug sind, um 4-7 Stunden am Tag bei sonnigen Bedingungen zu fahren. Während Erfahrung mit langen Fahrten nicht zwingend erforderlich ist, ist es immer besser, wenn du ein paar hundert Kilometer Fahrt hinter dir hast. Bitte kläre mit deinem Arzt ab, ob du irgendwelche Vorerkrankungen hast."
+      },
+      {
+        question: "Wie sind die Straßenverhältnisse in Indien?",
+        answer: "Auf unserer Route werden wir über so ziemlich alles fahren, was unter Straßenoberflächen beschrieben werden kann. Wir gleiten über brandneue Bergkurven und cruisen über vierspurige Autobahnen, die abrupt auf schlaglochübersäte Landstraßen führen, begegnen engen Gassen in der Innenstadt sowie manövrieren langsam über Schotter- und Sandabschnitte. Mach dir keine Sorgen um das Handling der Motorräder, die Enfield ist genau für das breite Spektrum der indischen Straßenverhältnisse gebaut."
+      },
+      {
+        question: "Werde ich Magen-Darm-Erkrankungen bekommen?",
+        answer: "Biken macht mit Magenverstimmung keinen Spaß. Und während wir die Gesamtreaktion deines Systems auf indische Bedingungen nicht garantieren können, legen wir höchsten Wert auf hygienische Standards in den Küchen unserer Partner. Alle Zutaten sind frisch, mit Flaschenwasser gewaschen und kein ungares Essen berührt die Teller."
+      },
+      {
+        question: "Kann ich mein eigenes Motorrad mitbringen?",
+        answer: "Es hat viele Vorteile, wenn die ganze Gruppe das gleiche Motorrad fährt. Unsere Tour wird von einem Enfield-Mechaniker begleitet und wir sind mit den gängigsten Ersatzteilen ausgestattet. Auch in Bezug auf Sicherheit und Reisegeschwindigkeit ist es von großem Vorteil, denselben Karosserietyp und Motor in der ganzen Gruppe zu haben. Die Kosten für die Miete einer unserer Enfields sind im Preis inbegriffen. Wenn du die Fahrt jedoch auf deinem eigenen Motorrad machen möchtest, kontaktiere uns bitte."
+      }
+    ],
+    dates: [
+      { start: "Nov 15, 2026", end: "Nov 20, 2026", availability: "Available", availabilityDe: "Verfügbar", status: "available" },
+      { start: "Dec 01, 2026", end: "Dec 06, 2026", availability: "Few Seats", availabilityDe: "Wenige Plätze", status: "warning" },
+      { start: "Jan 10, 2027", end: "Jan 15, 2027", availability: "Available", availabilityDe: "Verfügbar", status: "available" }
+    ],
   },
   {
     slug: "goa-ke-us-paar",
@@ -330,21 +342,21 @@ export const TOURS_DATA: TranslatedTour[] = [
         title: "Village Life and Seaside Serenity",
         km: "135 km",
         description: "Today’s ride takes us deep into the heart of Goa’s countryside. As we glide through picturesque Goan villages, you’ll experience the quiet charm of rural Goan life. Cruise through the lush Netravali forest, a green paradise where the cool temperatures provide a refreshing break from the plains. We arrive at our accommodation at Agonda Beach for a delicious seaside lunch. After a refreshing break, we’ll set off to explore the historic Cabo De Rama Fort, a site steeped in legends and offering breathtaking views of the coastline. From there, make your way to the Cabo De Rama beach nearby to witness a mesmerizing sunset, where the golden hues meet the Arabian Sea. As the day winds down, savor a delectable dinner at one of the seaside restaurants, soaking in the ambiance of the ocean under the stars.",
-         image: "https://slowmoto.tours/wp-content/uploads/Pillion-Icon.webp"
+        image: "https://slowmoto.tours/wp-content/uploads/Pillion-Icon.webp"
       },
       {
         day: 4,
         title: "Coastal Ride to Goa’s Capital, Panaji",
         km: "80 km",
         description: "Our journey today follows the scenic beach roads towards Goa’s capital, Panaji and we experience the vibrant charm of Goa’s real-life traffic. We check in to a boutique stay in the ancient Latin Quarters, where history whispers from every corner. In the evening, we take to the charming streets of the old Latin Quarters and sample the best culinary delights Panaji has to offer on a Goan Feni & Tapas Food Trail! A night full of delicious food, premium Feni and exotic Feni-based cocktails are sure to leave you in high spirits (quite literally)! And if you fancy an adventure and think you’re in luck today, you can visit one of Goa’s famous floating casinos later on, where you can try your hand at gambling in a lively atmosphere.",
-         image: "https://slowmoto.tours/wp-content/uploads/single-room.webp"
+        image: "https://slowmoto.tours/wp-content/uploads/single-room.webp"
       },
       {
         day: 5,
         title: "Island Hopping and the Road Back to North Goa",
         km: "40 km",
         description: "We begin the day with a ferry ride to Divar Island, taking our motorbikes along for an exciting exploration. Ride through the peaceful island, soaking in its idyllic, untouched beauty, before heading back to North Goa for a delightful lunch. In the evening, we’ll explore the vibrant flea markets of North Goa, where you can browse for unique trinkets, thoughtful gifts for loved ones, or memorable souvenirs to take home. The colorful stalls and bustling atmosphere are a feast for the senses. Afterward, we’ll head to a carefully selected spot for a delightful dinner, capping off the day with a delicious culinary experience.",
-         image: "https://slowmoto.tours/wp-content/uploads/morjim-9.webp"
+        image: "https://slowmoto.tours/wp-content/uploads/morjim-9.webp"
       },
       {
         day: 6,
@@ -380,7 +392,7 @@ export const TOURS_DATA: TranslatedTour[] = [
       "Our gratitude for booking with us :-)"
     ],
     requirements: [
-       "valid passport",
+      "valid passport",
       "visa (get your official visa here: https://indianvisaonline.gov.in)",
       "valid internationl driving license for 350ccm motorbikes",
       "international travel insurance (covering costs of outpatient and inpatient treatment and prescribed remedies if you are acutely ill or have an accident abroad)",
@@ -401,6 +413,69 @@ export const TOURS_DATA: TranslatedTour[] = [
     titleDe: "Goa Ke Us Paar",
     subtitleDe: "6 Tage Goa Rundreise",
     descriptionDe: "Eine luxuriöse Abenteuer-Motorradtour durch Goas ruhiges Hinterland und atemberaubende Küstenregionen, ergänzt durch exklusive, handverlesene Aktivitäten, historische Unterkünfte und authentische Küche.",
+    itineraryDe: [
+      {
+        day: 1,
+        title: "Ankunftstag, Vagator, Goa",
+        description: "Willkommen in Nord-Goa! Checke in eine ruhige, dschungelartige Unterkunft ein, weit weg von den belebten Stränden. Entspanne dich inmitten der Natur mit den beruhigenden Klängen der Vögel in einer friedlichen Umgebung. Am Abend bringen wir dich zu Goas ikonischen Stränden im Norden, wo die lebhafte Partyszene zum Leben erwacht. Genieße die pulsierende Atmosphäre, die Musik und das Nachtleben, für das Goa berühmt ist. Wir runden den Tag mit einem köstlichen Abendessen mit frischen, lokalen Meeresfrüchtespezialitäten ab."
+      },
+      {
+        day: 2,
+        title: "Alt-Goa, ein reiches Erbe",
+        description: "Wir beginnen unseren Tag mit einer malerischen Fahrt durch charmante Dorfstraßen, vorbei an Feldern und Kokosnusswäldern. Tauche ein in den entspannten Lebensstil Goas, während du in unserer Unterkunft ankommst, einem geschichtsträchtigen Heritage-Bungalow. Erlebe eine geführte Tour durch den Besitzer, der Geschichten über das reiche Erbe seiner Familie erzählt. Genieße ein authentisches, hausgemachtes goanisches Mittagessen. Nach einem entspannten Nachmittag begeben wir uns auf eine Reise durch das reiche Erbe Goas, beginnend mit einem Besuch der ikonischen Basilika Bom Jesus in Alt-Goa, einem UNESCO-Weltkulturerbe. Bewundere die Pracht der Kirche St. Franziskus von Assisi und der majestätischen Se-Kathedrale."
+      },
+      {
+        day: 3,
+        title: "Dorfleben und Gelassenheit am Meer",
+        description: "Die heutige Fahrt führt uns tief ins Herz von Goas ländlicher Gegend. Während wir durch malerische goanische Dörfer gleiten, erlebst du den ruhigen Charme des ländlichen Lebens. Fahre durch den üppigen Netravali-Wald, ein grünes Paradies, in dem die kühlen Temperaturen eine erfrischende Pause von der Ebene bieten. Wir erreichen unsere Unterkunft am Agonda Beach für ein köstliches Mittagessen am Meer. Nach einer erfrischenden Pause machen wir uns auf den Weg, um das historische Cabo De Rama Fort zu erkunden, ein Ort voller Legenden mit atemberaubendem Blick auf die Küste."
+      },
+      {
+        day: 4,
+        title: "Küstenfahrt nach Goas Hauptstadt Panaji",
+        description: "Unsere Reise führt uns heute entlang der malerischen Strandstraßen in Richtung Goas Hauptstadt Panaji, wobei wir den lebendigen Charme des echten indischen Verkehrs erleben. Wir checken in ein Boutique-Hotel im alten Viertel Fontainhas ein, wo die Geschichte aus jeder Ecke flüstert. Am Abend spazieren wir durch die charmanten Straßen des alten lateinischen Viertels und probieren die besten kulinarischen Köstlichkeiten, die Panaji zu bieten hat, auf einem goanischen Feni & Tapas Food Trail!"
+      },
+      {
+        day: 5,
+        title: "Island Hopping und der Weg zurück nach Nord-Goa",
+        description: "Wir beginnen den Tag mit einer Fährfahrt zur Insel Divar und nehmen unsere Motorräder für eine spannende Erkundungstour mit. Fahre über die friedliche Insel und genieße ihre idyllische, unberührte Schönheit, bevor du für ein köstliches Mittagessen zurück nach Nord-Goa fährst. Am Abend erkunden wir die lebhaften Flohmärkte von Nord-Goa, wo du nach einzigartigen Schmuckstücken, Geschenken für deine Lieben oder unvergesslichen Souvenirs stöbern kannst."
+      },
+      {
+        day: 6,
+        title: "Abschied von Goa",
+        description: "Guten Morgen Vagator! Nach einem gemütlichen Frühstück ist es Zeit auszuchecken. Nimm dir einen Moment Zeit, um über die schönen Erinnerungen deines Goa-Abenteuers nachzudenken, bevor du dich auf den Heimweg machst."
+      }
+    ],
+    quickFactsDe: {
+      startEnd: "Vagator, Goa, Indien",
+      tourDuration: "6 Tage / 5 Nächte / 4 Tage auf der Enfield",
+      totalDistance: "335 km",
+      averageRiding: "3 Stunden/Tag inklusive Pausen",
+      bikesMax: "Max. 6 Motorräder",
+      airport: "Manohar International Airport, Mopa / GOX"
+    },
+    includedDe: [
+      "Royal Enfield Classic 350 Motorrad inklusive Benzin und Kilometer",
+      "Englischsprachiger Reiseleiter",
+      "Begleitwagen für Gepäck",
+      "Unterkunft (Doppelzimmer oder Einzelzimmer je nach Buchung)",
+      "Frühstück, Mittag- und Abendessen",
+      "Alle alkoholfreien Getränke",
+      "Versicherung für das Motorrad (deckt Sachschäden am Motorrad sowie Sach- und Personenschäden an Dritten)",
+      "Eintrittsgelder für Sehenswürdigkeiten, Naturschutzgebiete, Mautgebühren",
+      "Ozeane, Flüsse, Schwimmbäder",
+      "Unser Dank für deine Buchung :-)"
+    ],
+    requirementsDe: [
+      "gültiger Reisepass",
+      "Visum (erhalte dein offizielles Visum hier: https://indianvisaonline.gov.in)",
+      "gültiger internationaler Führerschein für 350ccm Motorräder",
+      "internationale Reiseversicherung (deckt Kosten für ambulante und stationäre Behandlung sowie verschriebene Medikamente bei akuter Krankheit oder Unfall im Ausland)",
+      "persönliche Schutzausrüstung (Pflicht: festes Schuhwerk und Handschuhe, Helm; dringend empfohlen: Schutzkleidung, Regenkleidung, Staubschutz, Sonnenbrille und Sonnencreme)"
+    ],
+    dates: [
+      { start: "Feb 05, 2027", end: "Feb 10, 2027", availability: "Available", availabilityDe: "Verfügbar", status: "available" },
+      { start: "Mar 12, 2027", end: "Mar 17, 2027", availability: "Available", availabilityDe: "Verfügbar", status: "available" }
+    ],
   },
   {
     slug: "the-roads-to-chirakkal",
@@ -547,7 +622,7 @@ export const TOURS_DATA: TranslatedTour[] = [
       "Our gratitude for booking with us :-)"
     ],
     requirements: [
-       "valid passport",
+      "valid passport",
       "visa (get your official visa here: https://indianvisaonline.gov.in)",
       "valid internationl driving license for 350ccm motorbikes",
       "international travel insurance (covering costs of outpatient and inpatient treatment and prescribed remedies if you are acutely ill or have an accident abroad)",
@@ -568,6 +643,111 @@ export const TOURS_DATA: TranslatedTour[] = [
     titleDe: "The Roads to Chirakkal",
     subtitleDe: "14 Tage Kochi Rundreise",
     descriptionDe: "Fahre die legendäre Royal Enfield Bullet entlang der Grenze von Kerala, Tamil Nadu und Karnataka. Vom Ozean durch Teeplantagen, sonnige Reisfelder und kühle Dschungelwälder, hoch in die Berge in Tiger- und Elefantenreservate.",
+    itineraryDe: [
+      {
+        day: 1,
+        title: "Ankunftstag, Kochi",
+        description: "Willkommen an unserer Basis am Strand. Atme tief durch und entspanne dich, spring in den erfrischenden Pool oder das Arabische Meer. Nimm Platz auf deiner Enfield. Triff deine Mitfahrer und unsere Crew bei einem kalten Getränk am Esstisch."
+      },
+      {
+        day: 2,
+        title: "Kochi zu den Athirappilly Fällen",
+        description: "Wir lassen es an deinem ersten Tag ruhig angehen. Von der dichten Küstenregion erreichen wir bald ländliche Gebiete und gleiten schließlich über eine kurvenreiche Straße in das kühlere Waldklima zu den beeindruckenden Athirappilly Wasserfällen."
+      },
+      {
+        day: 3,
+        title: "Athirappilly Fälle nach Pollachi",
+        description: "Vier Stunden über schöne Straßen fahren wir unsere Enfields tiefer in den Wald und die Berge eines Wildschutzgebietes. Wir passieren die kleine Stadt Valparai und biegen nach Norden ab über 40 Haarnadelkurven hinunter in die Ebene nach Pollachi."
+      },
+      {
+        day: 4,
+        title: "Pollachi nach Coonoor",
+        description: "Heute fahren wir über die industriellen Ebenen, umgehen Coimbatore und erreichen den Fuß der Berge. Wir winden uns über Haarnadelkurven durch dichten Dschungel hinauf nach Coonoor auf 1800 Metern Höhe."
+      },
+      {
+        day: 5,
+        title: "Coonoor nach Sulthan Bathery",
+        description: "In nordwestlicher Richtung führt uns unsere Reise über das Hochplateau von Wayanad. Die Straße ist legendär unter Fahrern und zaubert Enthusiasten ein Lächeln ins Gesicht mit ihrer sanft geschwungenen Linienführung durch die Teeplantagen."
+      },
+      {
+        day: 6,
+        title: "Sulthan Bathery nach Kannur",
+        description: "Über eine schöne Straße durch kühlen Wald erreichen wir einen steilen Abhang, der uns hinunter in die Küstenregionen des Bezirks Kannur führt. Wir übernachten in einem liebevoll geführten Resort direkt am Arabischen Meer."
+      },
+      {
+        day: 7,
+        title: "Freier Tag in Kannur",
+        description: "Entspanne dich. Genieße das köstliche hausgemachte traditionelle Essen. Genieße den Strand und den warmen Ozean. Wie wäre es mit einer ayurvedischen Massage oder einem Besuch des lebhaften Marktes von Kannur?"
+      },
+      {
+        day: 8,
+        title: "Kannur nach Noolpuzha",
+        description: "Mit einem kleinen Umweg fahren wir wieder hinauf in den Wayanad-Distrikt, natürlich auf einer anderen Route. Durch Wälder und Tee- sowie Kaffeeplantagen schwingen wir uns durch die Hügel zu unserem Etappenziel, einem Heritage-Resort."
+      },
+      {
+        day: 9,
+        title: "Noolpuzha nach Hasanur",
+        description: "Die sanften Kurven des Hill Highway führen uns in das Bandipur-Tigerreservat. Hier stehen die Chancen gut, Elefanten, Hirsche oder Pfauen zu sehen. Wir übernachten in einem rustikalen, aber herzlich geführten Farm-Resort."
+      },
+      {
+        day: 10,
+        title: "Hasanur nach Erode",
+        description: "Wir verlassen das Elefantenland durch ein weites Tal und über 27 Haarnadelkurven hinunter in die Ebenen von Erode. In der lebhaften Stadt Erode übernachten wir in einem richtigen Hotel im Herzen der Stadt."
+      },
+      {
+        day: 11,
+        title: "Erode nach Kodaikanal",
+        description: "Der Tag beginnt auf langen, geraden Landstraßen durch das ländliche Tamil Nadu. Nach drei Stunden erreichen wir die Pilgerstadt Palani und fahren von dort hinauf auf 1700 Meter in den Bergort Kodaikanal."
+      },
+      {
+        day: 12,
+        title: "Kodaikanal nach Munnar",
+        description: "Die Fahrt hinunter von den Kodai-Bergen bietet atemberaubende Ausblicke. Über 17 Haarnadelkurven und fantastische Bergstraßen gleiten wir schließlich nach Munnar, unserem heutigen Ziel."
+      },
+      {
+        day: 13,
+        title: "Munnar nach Kochi",
+        description: "Auf unserer letzten Etappe verlassen wir die wunderschönen Hügel von Munnar und gleiten zurück in die Gegend von Kochi. Wir kehren zu unserem Ausgangspunkt am Meer zurück."
+      },
+      {
+        day: 14,
+        title: "Check-Out in Kochi",
+        description: "Nimm ein letztes Bad im Arabischen Meer und nimm all diese Erinnerungen mit. Wir wünschen dir eine entspannte und sichere Weiterreise!"
+      }
+    ],
+    quickFactsDe: {
+      startEnd: "Kochi, Kerala, Indien",
+      tourDuration: "14 Tage / 13 Nächte / 11 Tage auf der Enfield",
+      totalDistance: "1700 km",
+      averageRiding: "6 Stunden/Tag inklusive Pausen",
+      bikesMax: "Max. 6 Motorräder",
+      airport: "Kochi / Cochin / COK",
+      pillionNote: "Kurze Strecken können für Soziusfahrer ungeeignet sein."
+    },
+    includedDe: [
+      "Royal Enfield Classic 350 Motorrad inklusive Benzin und Kilometer",
+      "Englischsprachiger Reiseleiter und Support-Crew",
+      "Ein engagierter Royal Enfield Mechaniker",
+      "Begleitwagen für Gepäck",
+      "Unterkunft (Doppelzimmer oder Einzelzimmer)",
+      "Frühstück, Mittag- und Abendessen",
+      "Alle alkoholfreien Getränke",
+      "Versicherung für das Motorrad",
+      "Eintrittsgelder für Sehenswürdigkeiten",
+      "Ozeane, Flüsse, Schwimmbäder",
+      "Unser Dank für deine Buchung :-)"
+    ],
+    requirementsDe: [
+      "gültiger Reisepass",
+      "Visum",
+      "gültiger internationaler Führerschein für 350ccm Motorräder",
+      "internationale Reiseversicherung",
+      "persönliche Schutzausrüstung"
+    ],
+    dates: [
+      { start: "Nov 15, 2026", end: "Nov 28, 2026", availability: "Available", availabilityDe: "Verfügbar", status: "available" },
+      { start: "Jan 10, 2027", end: "Jan 23, 2027", availability: "Available", availabilityDe: "Verfügbar", status: "available" }
+    ],
   },
   {
     slug: "goa-ka-rishta",
@@ -699,7 +879,7 @@ export const TOURS_DATA: TranslatedTour[] = [
       "Our gratitude for booking with us :-)"
     ],
     requirements: [
-       "valid passport",
+      "valid passport",
       "visa (get your official visa here: https://indianvisaonline.gov.in)",
       "valid internationl driving license for 350ccm motorbikes",
       "international travel insurance (covering costs of outpatient and inpatient treatment and prescribed remedies if you are acutely ill or have an accident abroad)",
@@ -720,6 +900,99 @@ export const TOURS_DATA: TranslatedTour[] = [
     titleDe: "Goa Ka Rishta",
     subtitleDe: "12 Tage Kochi → Goa",
     descriptionDe: "Ein aufregendes Einweg-Motorradabenteuer, das die malerischen Landschaften der Westghats erkundet. Von Kerala über Tamil Nadu nach Karnataka und Goa genießt du Fahrten durch Reservate und zu Naturwundern und ruhigen Aufenthalten.",
+    itineraryDe: [
+      {
+        day: 1,
+        title: "Ankunftstag, Kochi",
+        description: "Willkommen an unserer Basis am Strand. Atme tief durch, entspanne dich und spring ins Arabische Meer. Triff deine Mitfahrer und unsere Crew bei einem kalten Getränk am Esstisch."
+      },
+      {
+        day: 2,
+        title: "Kochi zu den Athirappilly Fällen",
+        description: "An deinem ersten Tag mit den Enfields lassen wir es entspannt angehen. Von der dichten Küstenregion erreichen wir bald ländliche Gegenden, bevor wir uns auf einer kurvenreichen Straße zu den beeindruckenden Athirappilly-Wasserfällen begeben."
+      },
+      {
+        day: 3,
+        title: "Athirappilly Fälle nach Pollachi",
+        description: "Über eine kleine, schöne Straße fahren wir tiefer in den Wald und die Berge eines Wildschutzgebietes. Wir übernachten in einem verträumten Ökodorf inmitten eines Kokosnusshains in der ruhigen Landschaft von Pollachi."
+      },
+      {
+        day: 4,
+        title: "Pollachi nach Coonoor",
+        description: "Heute umfahren wir die Industriestadt Coimbatore und erreichen den Fuß der Berge des Wayanad-Plateaus. Wir winden uns über Haarnadelkurven durch dichten Dschungel hinauf nach Coonoor auf 1800 Metern Höhe."
+      },
+      {
+        day: 5,
+        title: "Coonoor nach Sulthan Bathery",
+        description: "In nordwestlicher Richtung führt uns unsere Reise über das Wayanad-Plateau nach Sulthan Bathery. Das Klima ist sehr angenehm und die Straße ist legendär unter Motorradfahrern."
+      },
+      {
+        day: 6,
+        title: "Sulthan Bathery nach Kannur",
+        description: "Über eine schöne Straße durch kühlen Wald erreichen wir einen steilen Abhang, der uns hinunter in die Küstenregionen von Kannur führt. Wir übernachten in einem schönen Resort direkt am Arabischen Meer."
+      },
+      {
+        day: 7,
+        title: "Freier Tag in Kannur",
+        description: "Gönne dir eine wohlverdiente Pause. Genieße das köstliche hausgemachte traditionelle Essen, entspanne am Strand oder erkunde den lokalen Markt. Wir helfen dir, den Tag nach deinen Wünschen zu gestalten."
+      },
+      {
+        day: 8,
+        title: "Kannur nach Madikeri",
+        description: "Wir verlassen den Küstenverkehr und fahren nach Karnataka, hinauf in die Westghats nach Coorg, auch bekannt als die „Schottland Indiens“. Es erwarten uns zauberhafte Straßen durch üppige Kaffeeplantagen."
+      },
+      {
+        day: 9,
+        title: "Madikeri nach Chikmagaluru",
+        description: "Unsere Reise führt uns durch dichten Dschungel und Plantagen nach Madikeri auf makellosen Straßen mit atemberaubender Aussicht. Später erreichen wir Chikmagaluru, wo wir in einem herrschaftlichen Anwesen übernachten."
+      },
+      {
+        day: 10,
+        title: "Chikmagaluru zu den Jog Falls",
+        description: "Der Morgen beginnt mit einer faszinierenden Fahrt durch Dschungel und Kaffeeplantagen. Später erreichen wir die majestätischen Jog Falls, Indiens zweithöchste Wasserfälle."
+      },
+      {
+        day: 11,
+        title: "Jog Falls nach Palolem",
+        description: "Unser letzter Tag auf den Enfields beginnt auf einer malerischen Landstraße durch grüne Reisfelder. Wir erreichen schließlich unser Ziel – den wunderschönen Palolem Beach in Goa."
+      },
+      {
+        day: 12,
+        title: "Check-out in Palolem",
+        description: "An unserem letzten Tag genießen wir ein finales Bad im Arabischen Meer, bevor wir unser Abenteuer beenden. Mit vielen schönen Erinnerungen im Gepäck machen wir uns auf den Heimweg."
+      }
+    ],
+    quickFactsDe: {
+      startEnd: "Start in Kochi, Ende in Palolem",
+      tourDuration: "12 Tage / 11 Nächte / 9 Tage auf der Enfield",
+      totalDistance: "1400 km",
+      averageRiding: "6 Stunden/Tag inklusive Pausen",
+      bikesMax: "Max. 6 Motorräder",
+      airport: "Kochi (COK) / Dabolim (GOI)"
+    },
+    includedDe: [
+      "Royal Enfield Classic 350 Motorrad inklusive Benzin und Kilometer",
+      "Englischsprachiger Reiseleiter und Support-Crew",
+      "Ein engagierter Royal Enfield Mechaniker",
+      "Begleitwagen für Gepäck",
+      "Unterkunft (Doppelzimmer oder Einzelzimmer)",
+      "Frühstück, Mittag- und Abendessen",
+      "Alle alkoholfreien Getränke",
+      "Versicherung für das Motorrad",
+      "Eintrittsgelder für Sehenswürdigkeiten",
+      "Ozeane, Flüsse, Schwimmbäder",
+      "Unser Dank für deine Buchung :-)"
+    ],
+    requirementsDe: [
+      "gültiger Reisepass",
+      "Visum",
+      "gültiger internationaler Führerschein für 350ccm Motorräder",
+      "internationale Reiseversicherung",
+      "persönliche Schutzausrüstung"
+    ],
+    dates: [
+      { start: "Jan 30, 2027", end: "Feb 10, 2027", availability: "Available", availabilityDe: "Verfügbar", status: "available" }
+    ],
   },
   {
     slug: "goa-se-wapasi",
@@ -851,7 +1124,7 @@ export const TOURS_DATA: TranslatedTour[] = [
       "Our gratitude for booking with us :-)"
     ],
     requirements: [
-       "valid passport",
+      "valid passport",
       "visa (get your official visa here: https://indianvisaonline.gov.in)",
       "valid internationl driving license for 350ccm motorbikes",
       "international travel insurance (covering costs of outpatient and inpatient treatment and prescribed remedies if you are acutely ill or have an accident abroad)",
@@ -872,6 +1145,99 @@ export const TOURS_DATA: TranslatedTour[] = [
     titleDe: "Goa Se Wapasi",
     subtitleDe: "12 Tage Goa → Kochi",
     descriptionDe: "Eine spannende Einweg-Motorradtour durch die Westghats, Keralas Wildreservate und Tamil Nadus Kulturlandschaften. Erlebe die Pracht der Natur und die kulturelle Vielfalt Südindiens.",
+    itineraryDe: [
+      {
+        day: 1,
+        title: "Ankunftstag, Palolem, Goa",
+        description: "Willkommen am Palolem Beach! Nimm dir einen Moment Zeit, um dich zu entspannen und die schöne Umgebung zu genießen. Genieße ein erfrischendes Bad im Arabischen Meer oder einen Spaziergang am Strand bei Sonnenuntergang."
+      },
+      {
+        day: 2,
+        title: "Palolem zu den Jog Falls",
+        description: "Wir beginnen unsere Tour in Palolem und fahren entlang der Küstenstraße. Später steigen wir in die Berge der Westghats auf, vorbei an malerischen Dörfern und grünen Reisfeldern bis zu den majestätischen Jog Falls."
+      },
+      {
+        day: 3,
+        title: "Jog Falls nach Chikmagaluru",
+        description: "Wir setzen unsere Fahrt durch malerische Landschaften fort, vorbei an charmanten Waldwegen und ruhiger Umgebung. Unser Tag endet in einem prächtigen Anwesen inmitten von Kaffeeplantagen bei Chikmagaluru."
+      },
+      {
+        day: 4,
+        title: "Chikmagaluru nach Madikeri",
+        description: "Die heutige Reise beginnt in einem üppigen Tal mit unberührtem Dschungel. Genieße die zauberhaften Straßen und den minimalen Verkehr, während wir durch duftende Wälder und Kaffeeplantagen nach Madikeri fahren."
+      },
+      {
+        day: 5,
+        title: "Madikeri nach Kannur",
+        description: "Von Madikeri aus fahren wir auf einer kleinen Waldstraße zurück zu den Hauptstraßen, um von den Westghats in den Bezirk Kannur hinabzusteigen. Wir übernachten in einem schönen Resort direkt am Arabischen Meer."
+      },
+      {
+        day: 6,
+        title: "Freier Tag in Kannur",
+        description: "Gönne dir eine wohlverdiente Pause. Genieße das köstliche hausgemachte traditionelle Essen, entspanne am Strand oder erkunde den lokalen Markt. Wir helfen dir, den Tag nach deinen Wünschen zu gestalten."
+      },
+      {
+        day: 7,
+        title: "Kannur nach Sulthan Bathery",
+        description: "Wir verlassen Kannur und fahren hinauf zum Wayanad-Plateau nach Sulthan Bathery. Genieße die kurvenreiche Straße durch die Teehügel bei angenehmem Klima und herrlicher Aussicht."
+      },
+      {
+        day: 8,
+        title: "Sulthan Bathery nach Coonoor",
+        description: "Unsere Reise führt uns in südöstlicher Richtung zum Rand des Wayanad-Plateaus. Die sanften Kurven des legendären „Hill Highway“ sind ein wahrgewordener Traum für jeden Motorradfahrer."
+      },
+      {
+        day: 9,
+        title: "Coonoor nach Pollachi",
+        description: "Wir beginnen den Morgen in kühler Bergluft auf einer schmalen, gewundenen Straße durch Teeplantagen. Der Abstieg vom Plateau führt uns auf perfektem Asphalt hinunter in die Ebene nach Pollachi."
+      },
+      {
+        day: 10,
+        title: "Pollachi nach Munnar",
+        description: "Durch Kokosnussplantagen fahren wir Richtung Sonnenaufgang zum Anamalai-Tigerreservat. Auf einer kleinen Straße navigieren wir tiefer und höher in die großartigen Landschaften dieses Wildschutzgebietes nach Munnar."
+      },
+      {
+        day: 11,
+        title: "Munnar nach Kochi",
+        description: "An unserem letzten Fahrtag reisen wir zurück nach Kochi. Wir wechseln von den kühlen Dschungelbergen und ruhigen ländlichen Landschaften in die geschäftige Küstenregion zu unserem Gästehaus am Strand."
+      },
+      {
+        day: 12,
+        title: "Check-out in Kochi",
+        description: "Nimm ein letztes Bad im Arabischen Meer, bevor du auscheckst. Reflektiere über die Erinnerungen der Reise, während du dich von Kochi verabschiedest und die unvergesslichen Erlebnisse mit nach Hause nimmst."
+      }
+    ],
+    quickFactsDe: {
+      startEnd: "Start in Palolem, Ende in Kochi",
+      tourDuration: "12 Tage / 11 Nächte / 9 Tage auf der Enfield",
+      totalDistance: "1400 km",
+      averageRiding: "6 Stunden/Tag inklusive Pausen",
+      bikesMax: "Max. 6 Motorräder",
+      airport: "Dabolim (GOI) / Kochi (COK)"
+    },
+    includedDe: [
+      "Royal Enfield Classic 350 Motorrad inklusive Benzin und Kilometer",
+      "Englischsprachiger Reiseleiter und Support-Crew",
+      "Ein engagierter Royal Enfield Mechaniker",
+      "Begleitwagen für Gepäck",
+      "Unterkunft (Doppelzimmer oder Einzelzimmer)",
+      "Frühstück, Mittag- und Abendessen",
+      "Alle alkoholfreien Getränke",
+      "Versicherung für das Motorrad",
+      "Eintrittsgelder für Sehenswürdigkeiten",
+      "Ozeane, Flüsse, Schwimmbäder",
+      "Unser Dank für deine Buchung :-)"
+    ],
+    requirementsDe: [
+      "gültiger Reisepass",
+      "Visum",
+      "gültiger internationaler Führerschein für 350ccm Motorräder",
+      "internationale Reiseversicherung",
+      "persönliche Schutzausrüstung"
+    ],
+    dates: [
+      { start: "Mar 20, 2027", end: "Mar 31, 2027", availability: "Available", availabilityDe: "Verfügbar", status: "available" }
+    ],
   },
   {
     slug: "your-custom-ride",

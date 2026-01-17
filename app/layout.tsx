@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Reem_Kufi } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import CookieConsent from "@/components/CookieConsent";
 
 const reemKufi = Reem_Kufi({
   variable: "--font-reem-kufi",
@@ -26,6 +27,7 @@ export default function RootLayout({
       >
         <LanguageProvider>
           {children}
+          <CookieConsent />
         </LanguageProvider>
       </body>
     </html>

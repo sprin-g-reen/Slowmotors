@@ -14,11 +14,17 @@ import IncludedModal from "./IncludedModal";
 import RequirementsModal from "./RequirementsModal";
 import BookingProcessModal from "./BookingProcessModal";
 import FaqModal from "./FaqModal";
+import { TranslatedTour } from "@/app/data/tours";
+import { translations } from "@/lib/translations";
 
 type ModalType = "dates" | "pricing" | "facts" | "itinerary" | "included" | "requirements" | "booking" | "faq" | null;
 
-export default function Header() {
-    const { t } = useLanguage();
+interface HeaderProps {
+    tour?: TranslatedTour;
+}
+
+export default function Header({ tour }: HeaderProps) {
+    const { t, language } = useLanguage();
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeModal, setActiveModal] = useState<ModalType>(null);
@@ -51,15 +57,17 @@ export default function Header() {
         setActiveModal(null);
     };
 
+    const exp = translations[language].experience;
+
     const experienceItems = [
-        { label: "Dates & Enquiry", type: "dates" as const },
-        { label: "Pricing", type: "pricing" as const },
-        { label: "Quick Facts", type: "facts" as const },
-        { label: "Itinerary", type: "itinerary" as const },
-        { label: "Included", type: "included" as const },
-        { label: "Requirements", type: "requirements" as const },
-        { label: "Booking Process", type: "booking" as const },
-        { label: "FAQ", type: "faq" as const },
+        { label: exp.booking.steps[0].title, type: "dates" as const }, // Dates & Enquiry
+        { label: language === 'de' ? "Preise" : "Pricing", type: "pricing" as const },
+        { label: exp.quick_facts.title, type: "facts" as const },
+        { label: exp.itinerary.title, type: "itinerary" as const },
+        { label: language === 'de' ? "Inklusive" : "Included", type: "included" as const },
+        { label: exp.requirements.title, type: "requirements" as const },
+        { label: exp.booking.title, type: "booking" as const },
+        { label: exp.faq.title, type: "faq" as const },
     ];
 
     return (
@@ -68,7 +76,7 @@ export default function Header() {
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-white/90 backdrop-blur-md shadow-md py-2" : "bg-transparent py-4"
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+                <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
                         <Image
@@ -81,7 +89,7 @@ export default function Header() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden lg:flex items-center space-x-8">
+                    <nav className="hidden lg:flex items-center space-x-10 mx-8">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.name}
@@ -102,7 +110,7 @@ export default function Header() {
                                     <button
                                         key={item.type}
                                         onClick={() => openModal(item.type)}
-                                        className="text-left px-4 py-3 text-dark hover:bg-gray-50 hover:text-primary transition-colors font-medium border-b border-gray-50 last:border-0"
+                                        className="text-left px-4 py-2 text-dark hover:bg-gray-50 hover:text-primary transition-colors font-medium border-b border-gray-50 last:border-0"
                                     >
                                         {item.label}
                                     </button>
@@ -122,7 +130,7 @@ export default function Header() {
                     </nav>
 
                     {/* RE Partner Badge & Mobile Menu Toggle */}
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-6">
                         <div className="hidden sm:block">
                             <LanguageToggle />
                         </div>
@@ -204,14 +212,14 @@ export default function Header() {
                 )}
             </header>
 
-            <DatesEnquiryModal isOpen={activeModal === "dates"} onClose={closeModal} />
-            <PricingModal isOpen={activeModal === "pricing"} onClose={closeModal} />
-            <QuickFactsModal isOpen={activeModal === "facts"} onClose={closeModal} />
-            <ItineraryModal isOpen={activeModal === "itinerary"} onClose={closeModal} />
-            <IncludedModal isOpen={activeModal === "included"} onClose={closeModal} />
-            <RequirementsModal isOpen={activeModal === "requirements"} onClose={closeModal} />
+            <DatesEnquiryModal isOpen={activeModal === "dates"} onClose={closeModal} tour={tour || null} />
+            <PricingModal isOpen={activeModal === "pricing"} onClose={closeModal} tour={tour} />
+            <QuickFactsModal isOpen={activeModal === "facts"} onClose={closeModal} tour={tour} />
+            <ItineraryModal isOpen={activeModal === "itinerary"} onClose={closeModal} tour={tour} />
+            <IncludedModal isOpen={activeModal === "included"} onClose={closeModal} tour={tour} />
+            <RequirementsModal isOpen={activeModal === "requirements"} onClose={closeModal} tour={tour} />
             <BookingProcessModal isOpen={activeModal === "booking"} onClose={closeModal} />
-            <FaqModal isOpen={activeModal === "faq"} onClose={closeModal} />
+            <FaqModal isOpen={activeModal === "faq"} onClose={closeModal} tour={tour} />
         </>
     );
 }
