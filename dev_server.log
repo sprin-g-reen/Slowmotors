@@ -12,7 +12,8 @@
   ? allowedDevOrigins (invalid experimental key)
 
 ✓ Starting...
-✓ Ready in 3.2s
-○ Compiling /tours ...
- GET /tours 200 in 11.7s (compile: 11.0s, render: 652ms)
- GET /blog 200 in 1214ms (compile: 1101ms, render: 113ms)
+✓ Ready in 1861ms
+○ Compiling /blog ...
+ GET /blog 200 in 6.7s (compile: 6.2s, render: 428ms)
+ GET /blog 200 in 99ms (compile: 7ms, render: 92ms)
+[?25h
