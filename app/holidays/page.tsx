@@ -6,10 +6,13 @@ import SubPageLayout from "@/components/SubPageLayout";
 import AccommodationGallery from "./AccommodationGallery";
 import { useLanguage } from "@/components/LanguageProvider";
 import { translations } from "@/lib/translations";
+import { useState } from "react";
+import Modal from "@/components/Modal";
 
 export default function HolidaysPage() {
     const { language } = useLanguage();
     const t = translations[language].holidays;
+    const [isSpecModalOpen, setIsSpecModalOpen] = useState(false);
 
     return (
         <>
@@ -26,6 +29,9 @@ export default function HolidaysPage() {
                         <div className="text-center mb-12">
                             <h2 className="text-3xl font-bold uppercase text-primary mb-2">{t.on_road.title}</h2>
                             <p className="text-xl font-bold italic text-secondary">{t.on_road.subtitle}</p>
+                        </div>
+                        <div className="w-full mb-8">
+                             <img src="https://slowmoto.tours/wp-content/uploads/Goat-Herd-Road.webp" alt="Goat Herd on Road" className="rounded-2xl shadow-lg w-full object-cover max-h-[500px]" />
                         </div>
                         <div className="prose prose-lg max-w-none text-dark/80 leading-relaxed space-y-4">
                             <p>{t.on_road.p1}</p>
@@ -54,11 +60,28 @@ export default function HolidaysPage() {
                          <div className="space-y-4">
                             <img src="https://slowmoto.tours/wp-content/uploads/Enfield-Sunset.webp" alt="Royal Enfield Sunset" className="rounded-2xl shadow-lg w-full" />
                             <img src="https://slowmoto.tours/wp-content/uploads/Royal-Enfield-Bullet-350.webp" alt="Royal Enfield Bullet" className="rounded-2xl shadow-lg w-full hidden md:block" />
-                            <img src="https://slowmoto.tours/wp-content/uploads/RE-Bullet_Classic-Specifications.webp" alt="Royal Enfield Specifications" className="rounded-2xl shadow-lg w-full" />
+                            <div
+                                className="cursor-pointer transition-transform hover:scale-105"
+                                onClick={() => setIsSpecModalOpen(true)}
+                            >
+                                <img src="https://slowmoto.tours/wp-content/uploads/RE-Bullet_Classic-Specifications.webp" alt="Royal Enfield Specifications" className="rounded-2xl shadow-lg w-full" />
+                                <p className="text-center text-sm text-gray-500 mt-2">(Click to enlarge)</p>
+                            </div>
                          </div>
                     </section>
 
+                    <Modal isOpen={isSpecModalOpen} onClose={() => setIsSpecModalOpen(false)} title="Technical Specifications">
+                        <img
+                            src="https://slowmoto.tours/wp-content/uploads/RE-Bullet_Classic-Specifications.webp"
+                            alt="Royal Enfield Specifications Full Size"
+                            className="w-full h-auto"
+                        />
+                    </Modal>
+
                     {/* Safety */}
+                    <div className="mb-12">
+                         <img src="https://slowmoto.tours/wp-content/uploads/Crazy-Indian-Traffic-comic-style-1.webp" alt="Indian Traffic" className="w-full rounded-2xl shadow-lg" />
+                    </div>
                     <section className="bg-orange-50 p-12 rounded-3xl">
                         <h2 className="text-3xl font-bold mb-8 uppercase text-primary text-center">{t.safety.title}</h2>
                         <div className="space-y-6 prose prose-lg text-dark/80 leading-relaxed max-w-none">
@@ -74,6 +97,11 @@ export default function HolidaysPage() {
                                 <div>
                                     <p>{t.safety.p7}</p>
                                 </div>
+                            </div>
+                            <div className="mt-8 text-center">
+                                <a href="https://slowmoto.tours/traffic-rules-road-conditions-and-safety-in-india/" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline">
+                                    Read our 10½ Hilariously Honest Observations on Traffic Rules, Road Conditions, and Safety in India
+                                </a>
                             </div>
                         </div>
                     </section>
@@ -117,6 +145,9 @@ export default function HolidaysPage() {
                     {/* Beyond the Road */}
                     <section className="text-center max-w-4xl mx-auto">
                         <h2 className="text-3xl font-bold mb-8 uppercase text-primary">{t.beyond.title}</h2>
+                        <div className="mb-8">
+                             <img src="https://slowmoto.tours/wp-content/uploads/Crowded-Street-TukTuk.webp" alt="Crowded Street" className="w-full rounded-2xl shadow-lg" />
+                        </div>
                         <div className="prose prose-lg text-dark/80 leading-relaxed space-y-6">
                             <p>{t.beyond.p1}</p>
                             <p>{t.beyond.p2}</p>

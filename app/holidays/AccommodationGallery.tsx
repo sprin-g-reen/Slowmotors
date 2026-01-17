@@ -27,6 +27,7 @@ const ACCOMMODATION_IMAGES = [
     "https://slowmoto.tours/wp-content/uploads/Raindrops-outside.webp",
     "https://slowmoto.tours/wp-content/uploads/Seashell-Terrace.webp",
     "https://slowmoto.tours/wp-content/uploads/Seashell-from-Beach-1.webp",
+    "https://slowmoto.tours/wp-content/uploads/Camp-Fire.webp",
 ];
 
 export default function AccommodationGallery() {
