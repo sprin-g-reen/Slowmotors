@@ -44,29 +44,30 @@ export default function HolidaysPage() {
                     </section>
 
                     {/* Bikes */}
-                    <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                         <div>
-                            <h2 className="text-3xl font-bold mb-8 uppercase text-primary">{t.bikes.title}</h2>
-                            <div className="prose prose-lg text-dark/80 leading-relaxed space-y-4">
-                                <p>{t.bikes.p1}</p>
-                                <p>{t.bikes.p2}</p>
-                                <p>{t.bikes.p3}</p>
-                                <p>{t.bikes.p4}</p>
-                                <p>{t.bikes.p5}</p>
-                                <p>{t.bikes.p6}</p>
-                                <p>{t.bikes.p7}</p>
-                            </div>
-                         </div>
-                         <div className="space-y-4">
-                            <img src="https://slowmoto.tours/wp-content/uploads/Enfield-Sunset.webp" alt="Royal Enfield Sunset" className="rounded-2xl shadow-lg w-full" />
-                            <img src="https://slowmoto.tours/wp-content/uploads/Royal-Enfield-Bullet-350.webp" alt="Royal Enfield Bullet" className="rounded-2xl shadow-lg w-full hidden md:block" />
-                            <div
-                                className="cursor-pointer transition-transform hover:scale-105"
-                                onClick={() => setIsSpecModalOpen(true)}
-                            >
-                                <img src="https://slowmoto.tours/wp-content/uploads/RE-Bullet_Classic-Specifications.webp" alt="Royal Enfield Specifications" className="rounded-2xl shadow-lg w-full" />
-                                <p className="text-center text-sm text-gray-500 mt-2">(Click to enlarge)</p>
-                            </div>
+                    <section>
+                         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-dark">Ride with passion and style</h2>
+                         <div className="w-full h-1 bg-orange-500 mb-8 max-w-2xl"></div>
+                         <h3 className="text-2xl font-bold mb-8 uppercase text-dark/80">{t.bikes.title}</h3>
+
+                         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                             <div className="prose prose-lg text-dark/80 leading-relaxed space-y-6">
+                                <p dangerouslySetInnerHTML={{ __html: t.bikes.p1 }} />
+                                <p dangerouslySetInnerHTML={{ __html: t.bikes.p2 }} />
+                                <p dangerouslySetInnerHTML={{ __html: t.bikes.p3 }} />
+                                <p dangerouslySetInnerHTML={{ __html: t.bikes.p4 }} />
+                                <p dangerouslySetInnerHTML={{ __html: t.bikes.p5 }} />
+                                <p dangerouslySetInnerHTML={{ __html: t.bikes.p6 }} />
+                                <p dangerouslySetInnerHTML={{ __html: t.bikes.p7 }} />
+                             </div>
+                             <div className="space-y-4">
+                                <div
+                                    className="cursor-pointer transition-transform hover:scale-105"
+                                    onClick={() => setIsSpecModalOpen(true)}
+                                >
+                                    <img src="https://slowmoto.tours/wp-content/uploads/RE-Bullet_Classic-Specifications.webp" alt="Royal Enfield Specifications" className="rounded-sm shadow-lg w-full bg-white p-2" />
+                                    <p className="text-center text-sm text-gray-500 mt-2">(Click to enlarge)</p>
+                                </div>
+                             </div>
                          </div>
                     </section>
 

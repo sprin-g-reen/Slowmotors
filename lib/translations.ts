@@ -175,12 +175,12 @@ export const translations = {
       },
       bikes: {
         title: "Bikes",
-        p1: "The Royal Enfield 350 Classic and Bullet are great cruisers for general Indian road conditions and with their old-school style and one-of-a-kind sound rightly deserve the title of the Indian legend.",
-        p2: "Get on their saddle and you will feel as if you were born there.",
-        p3: "The comfortable seating position invites for easy long distance cruising.",
-        p4: "Their 20 hp engine is strong enough to have fun in mountain curves and delivers enough headroom to safely overtake the lame TukTuk in front of you.",
-        p5: "The Classic and Bullet 350 are lovely bikes for all skill levels and super reliable companions on all our guided motorcycle tours.",
-        p6: "All our bikes are expertly serviced by our Royal Enfield technician before and during our tours.",
+        p1: "The <strong>Royal Enfield 350 Classic and Bullet</strong> are great cruisers for general Indian road conditions and with their <strong>old-school style</strong> and <strong>one-of-a-kind sound</strong> rightly deserve the title of the Indian legend.",
+        p2: "Get on their saddle and you will <strong>feel as if you were born there</strong>.",
+        p3: "The <strong>comfortable seating position</strong> invites for easy long distance cruising.",
+        p4: "Their 20 hp engine is strong enough to have <strong>fun in mountain curves</strong> and delivers enough headroom to safely overtake the lame TukTuk in front of you.",
+        p5: "The Classic and Bullet 350 are <strong>lovely bikes for all skill levels</strong> and super reliable companions on all our guided motorcycle tours.",
+        p6: "All our bikes are <strong>expertly serviced by our Royal Enfield technician</strong> before and during our tours.",
         p7: "We procure 2023 or later models of the 350 ccm Royal Enfield (Bullet / Classic) for our tours, depending on the availability."
       },
       safety: {
@@ -507,12 +507,12 @@ export const translations = {
       },
       bikes: {
         title: "Motorräder",
-        p1: "Die Royal Enfield 350 Classic und Bullet sind großartige Cruiser für allgemeine indische Straßenverhältnisse und verdienen mit ihrem Old-School-Stil und ihrem einzigartigen Sound zu Recht den Titel der indischen Legende.",
-        p2: "Steig auf ihren Sattel und du wirst dich fühlen, als wärst du dort geboren.",
-        p3: "Die bequeme Sitzposition lädt zum entspannten Langstreckencruisen ein.",
-        p4: "Ihr 20-PS-Motor ist stark genug, um in Bergkurven Spaß zu haben, und bietet genug Reserven, um das lahme TukTuk vor dir sicher zu überholen.",
-        p5: "Die Classic und Bullet 350 sind schöne Motorräder für alle Könnensstufen und super zuverlässige Begleiter auf all unseren geführten Motorradtouren.",
-        p6: "Alle unsere Motorräder werden von unserem Royal Enfield Techniker vor und während unserer Touren fachmännisch gewartet.",
+        p1: "Die <strong>Royal Enfield 350 Classic und Bullet</strong> sind großartige Cruiser für allgemeine indische Straßenverhältnisse und verdienen mit ihrem <strong>Old-School-Stil</strong> und ihrem <strong>einzigartigen Sound</strong> zu Recht den Titel der indischen Legende.",
+        p2: "Steig auf ihren Sattel und du wirst dich <strong>fühlen, als wärst du dort geboren</strong>.",
+        p3: "Die <strong>bequeme Sitzposition</strong> lädt zum entspannten Langstreckencruisen ein.",
+        p4: "Ihr 20-PS-Motor ist stark genug, um in <strong>Bergkurven Spaß zu haben</strong>, und bietet genug Reserven, um das lahme TukTuk vor dir sicher zu überholen.",
+        p5: "Die Classic und Bullet 350 sind <strong>schöne Motorräder für alle Könnensstufen</strong> und super zuverlässige Begleiter auf all unseren geführten Motorradtouren.",
+        p6: "Alle unsere Motorräder werden von unserem <strong>Royal Enfield Techniker vor und während unserer Touren fachmännisch gewartet</strong>.",
         p7: "Wir beschaffen 2023er oder spätere Modelle der 350 ccm Royal Enfield (Bullet / Classic) für unsere Touren, je nach Verfügbarkeit."
       },
       safety: {

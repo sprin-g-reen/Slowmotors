@@ -74,10 +74,10 @@ export default function Footer() {
                 <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs opacity-60">
                     <p>© {new Date().getFullYear()} {t.rights}</p>
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 mt-4 md:mt-0 items-center">
-                        <a href="https://slowmoto.tours/terms-and-conditions-of-services/" className="hover:underline">{t.terms_services}</a>
-                        <a href="https://slowmoto.tours/terms/" className="hover:underline">{t.website_terms}</a>
-                        <a href="https://slowmoto.tours/privacy-policy/" className="hover:underline">{t.cookie_privacy}</a>
-                        <a href="https://slowmoto.tours/imprint/" className="hover:underline">{t.imprint}</a>
+                        <Link href="/terms-services" className="hover:underline">{t.terms_services}</Link>
+                        <Link href="/website-terms" className="hover:underline">{t.website_terms}</Link>
+                        <Link href="/privacy-policy" className="hover:underline">{t.cookie_privacy}</Link>
+                        <Link href="/imprint" className="hover:underline">{t.imprint}</Link>
                     </div>
                 </div>
             </div>
