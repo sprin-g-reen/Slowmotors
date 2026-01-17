@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
 
 export const Bikes: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const imageSrc = "https://slowmoto.tours/wp-content/uploads/RE-Bullet_Classic-Specifications.webp";
+
   return (
     <section id="bikes" className="py-24 px-4 bg-surface-light dark:bg-surface-dark">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 lg:text-left lg:ml-8">
             <span className="text-primary font-bold tracking-[0.2em] uppercase text-sm mb-4 block">Ride with passion and style</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">Bikes</h2>
         </div>
@@ -43,13 +47,22 @@ export const Bikes: React.FC = () => {
           <div className="lg:w-1/2 relative">
              <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-full blur-2xl opacity-70" />
             <img
-              src="https://images.unsplash.com/photo-1622185135505-2d795003994a?auto=format&fit=crop&w=800&q=80"
-              alt="Royal Enfield Bike"
-              className="relative rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500"
+              src={imageSrc}
+              alt="Royal Enfield Bike Specification"
+              className="relative rounded-2xl shadow-2xl w-full transform hover:scale-105 transition-transform duration-500 cursor-pointer"
+              onClick={() => setIsModalOpen(true)}
             />
           </div>
         </div>
       </div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <img
+          src={imageSrc}
+          alt="Royal Enfield Bike Specification"
+          className="w-full h-auto max-h-[85vh] object-contain"
+        />
+      </Modal>
     </section>
   );
 };

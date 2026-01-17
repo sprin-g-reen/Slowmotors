@@ -32,6 +32,14 @@ const stories: Story[] = [
   }
 ];
 
+const videos = [
+  'L8oRHYpAEO0',
+  'uG3pxFAKFFA',
+  'p8C9J07QPc8',
+  'DSQPgX2Fw_s',
+  '_Ezti0eQtOg'
+];
+
 export const Stories: React.FC = () => {
   return (
     <section id="stories" className="py-24 bg-background-light dark:bg-background-dark relative">
@@ -46,7 +54,7 @@ export const Stories: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-20">
           {stories.map((story) => (
             <div key={story.id} className="group bg-white dark:bg-surface-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 flex flex-col">
               <div className="relative h-64 overflow-hidden">
@@ -75,7 +83,31 @@ export const Stories: React.FC = () => {
           ))}
         </div>
 
-         <div className="mt-16 text-center">
+        {/* Videos Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-display font-bold text-gray-900 dark:text-white mb-4">Shorts</h3>
+             <p className="text-lg text-gray-600 dark:text-gray-300">
+                Glimpses of the road less traveled.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {videos.map((videoId) => (
+              <div key={videoId} className="aspect-[9/16] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <iframe
+                  src={`https://www.youtube.com/embed/${videoId}`}
+                  title="YouTube video player"
+                  className="w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ))}
+          </div>
+        </div>
+
+         <div className="text-center">
              <a href="https://slowmoto.tours/slow-moto-stories/" target="_blank" rel="noopener noreferrer" className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-bold py-3 px-8 rounded-full transition-all uppercase tracking-wide text-sm">
                 View All Stories
             </a>

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
 
 export const Philosophy: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <div id="philosophy" className="bg-background-light dark:bg-background-dark overflow-hidden">
       {/* Section 1: Why We Ride / Riding slooow */}
@@ -128,7 +131,10 @@ export const Philosophy: React.FC = () => {
 
              {/* Jo */}
             <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
-              <div className="aspect-[3/4] overflow-hidden">
+              <div
+                className="aspect-[3/4] overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImage("/images/Jo.webp")}
+              >
                 <img src="/images/Jo.webp" alt="Jo" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex-grow flex flex-col">
@@ -145,7 +151,10 @@ export const Philosophy: React.FC = () => {
 
             {/* Pratish */}
              <div className="bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col">
-              <div className="aspect-[3/4] overflow-hidden">
+              <div
+                className="aspect-[3/4] overflow-hidden cursor-pointer"
+                onClick={() => setSelectedImage("/images/Pratish.webp")}
+              >
                 <img src="/images/Pratish.webp" alt="Pratish" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="p-6 flex-grow flex flex-col">
@@ -234,6 +243,16 @@ export const Philosophy: React.FC = () => {
            </div>
         </div>
       </section>
+
+       <Modal isOpen={!!selectedImage} onClose={() => setSelectedImage(null)}>
+        {selectedImage && (
+          <img
+            src={selectedImage}
+            alt="Crew Member"
+            className="w-full h-auto max-h-[85vh] object-contain"
+          />
+        )}
+      </Modal>
     </div>
   );
 };
