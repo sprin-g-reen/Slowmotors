@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from './Modal';
 
 const images = [
-  { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDJND7MhhAqwRG0Vm6J75HVf4u8zacG89VGkcF3KvcM8FxO61jinIkvyO9csfnKzngX0BwcG0M5UnnME6XWEErlKixZ2ABgvoVab3kChrPVOrBvyCXDl3UvTkGNvC5ib1OBAUTf_XT64zYjgcx7bH_WbmNCel4zAdfnaRlmDgf2KVqRI6IT4mNq3Sh2mEwI1LgphRpApR_9mitduzuWF0rsP-g31R2vZRCpJfP2ZC0SYOhec6drsU1gmxVFzC--d1qqSK1x6ItLX0k2", title: "Tea Hills", span: "row-span-2" },
+  { src: "https://images.unsplash.com/photo-1637066742971-726bee8d9f56?auto=format&fit=crop&w=800&q=80", title: "Tea Hills", span: "row-span-2" },
   { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAKW-TAcDC00jE-y8lNe0IH7eLDY1vIijDBetJc5BIy2vEUVq1ayIu2PChckhe8WLDYNklyzbemvce1MD0qvhFHjphk7DGBfnA6YY1eXNddH_fjJH0Pw_TRlI6Jn2nzuUoRFoBCmi_oR2gp2TZ2xxJezN3NqbuTVtotdOij_69BPnNIz1Lj5l5Yef6BQ-PnvN7A5LMz3pDKY8l6hx8xe2R8ZDy7CaUrx1lg-Bc0nQ9DG_TQjGcIIcGrQ4d2_Ng7cb4PFlRdKSMb_SDv", title: "Coastal Roads", span: "row-span-1" },
   { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDJhmD4lRXoNwQ7-zCqztwAEpXrqM191PV9-zcxoAKY0AJXIykbUOPAB3B6lEvLJmEfyu45eyQ1BJnIonOfVRzb3-_3tlKXvaynpnkfzAO2bGZIGfVNGPi3kTalm6JRGhz9SN0cEuIJMWPO2IsvPjObFfWd72of1OMKlNYa3PQ-2x366hZKys85C95_ZlYkxPvPzR9iBFGYR8CuzQ_BUnqOb30mw97yEuewai-aGAgwgfc16UwkBMMDX-xWLrt0gyHaOkDfVCu3xI11", title: "Warm Smiles", span: "row-span-1" },
   { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCT3SX8rz7PUnPkssBLonNBEK6dyt_kDBB1sNrA8jHCCi2OpHuo9Uymqf8Iadhh57Ud-uEe2xQ7Zgp-uR7wv3zOvQgb_leyfU6KEcUV87jPuD7dC3qmsQYpRUiNbE_wJ8oxMDeKNfcJb-iPCGG-nXAPmL-ThPj6a4FOHNriNXYhMks7PkXsdPu5Wa9clTJ_TB9ljdhYvTfUHnDDgOh5s55jw9AG4D0d1TFPHX0Mm52jMh8ir70vgsD5MhZ1JAPE4b4IvGJxTcLkWdD2", title: "Culinary", span: "row-span-2" },
@@ -10,6 +11,8 @@ const images = [
 ];
 
 export const Gallery: React.FC = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   return (
     <section className="py-24 px-4 bg-surface-light dark:bg-surface-dark overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -30,7 +33,11 @@ export const Gallery: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[200px] gap-4">
           {images.map((img, idx) => (
-            <div key={idx} className={`relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ${img.span === 'row-span-2' ? 'md:row-span-2 h-[416px]' : 'h-[200px]'}`}>
+            <div
+              key={idx}
+              className={`relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ${img.span === 'row-span-2' ? 'md:row-span-2 h-[416px]' : 'h-[200px]'} cursor-pointer`}
+              onClick={() => setSelectedImage(img.src)}
+            >
               <img 
                 src={img.src} 
                 alt={img.title}
@@ -46,6 +53,16 @@ export const Gallery: React.FC = () => {
           ))}
         </div>
       </div>
+
+      <Modal isOpen={!!selectedImage} onClose={() => setSelectedImage(null)}>
+        {selectedImage && (
+          <img
+            src={selectedImage}
+            alt="Gallery preview"
+            className="w-full h-auto max-h-[85vh] object-contain"
+          />
+        )}
+      </Modal>
     </section>
   );
 };

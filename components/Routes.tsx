@@ -6,7 +6,7 @@ const routes: Route[] = [
     id: 'western-ghats',
     title: 'The Western Ghats',
     description: 'Traverse breathtaking landscapes. Navigate thrilling hairpin bends from humid jungles to misty tea plantations at altitude.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDxn20W0QoADsz_0g-mvllAU4fgYAKKUpl5Yy-BgwT6nQNU-dQtaMTV9548EJuqWZ-xG9t_zvICtDxHwZ1S65KgAmL_kpFFUUeUEJeBBRKr2H3-fwcEag_jbAGK4mnFS9AgZbMX6mvFsHcRCO-dedghmLOoDPgdtXMT5VdYQ12uY9YZzsbTZNkjSFay0URqb66h1iC8xibORM-CYb-5sfEAqfMxDr1MUlJ9qF3EFHtym2lpi1f1Z03Ihx_HkzfAFwNAEl6dnGaWs8u9',
+    image: 'https://slowmoto.tours/wp-content/uploads/12-days-adventure-motorcycle-trips-Kochi-to-Goa-Header-Desktop.webp',
     days: 12,
     type: 'Mountain',
     difficulty: 'Hard',
@@ -16,7 +16,7 @@ const routes: Route[] = [
     id: 'goa-coastal',
     title: 'Goa Coastal Run',
     description: 'A relaxed cruise starting from vibrant Goa down to the serene beaches of the Arabian Sea. Seafood and Portuguese history.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCr1rrYvNhgIVOtRGtYsmyRh9EMoYizquk0Ls2LQdrKSYVVUEg4y649GyXBpBRnp4hnV1EoQV35BORmOdw98uAc4HnAzRtRrbeXjHimgQHhMvtxfp7WtZIznJgC5JA98RcqbqGjlLvcCanLGucjbozt8Sp3jVSy0Lny1Fn-LNfeqY_ibNuUUkc-i6PytqqgGkcW-oS2zzVVy-y6xM6GpOdPG4FblfEW_NxW6o06c5I-UNS8tKDdbe7NrO9G9H7sDWAowD7FXkguJfLw',
+    image: 'https://slowmoto.tours/wp-content/uploads/6-days-adventure-motorcycle-trips-Goa-Header-Desktop.webp',
     days: 8,
     type: 'Coastal',
     difficulty: 'Easy'
@@ -25,7 +25,7 @@ const routes: Route[] = [
     id: 'kochi-heritage',
     title: 'Kochi Heritage',
     description: 'Immerse yourself in history. Ride through paddy plains and explore the rich cultural tapestry of Kerala and Tamil Nadu.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC04ITMcH459xFk-I6kY8srTDVY6xnIkkr1rxIlWSZQdtXMsd0Tk7PnQIa9LwmsMoembkYqv9MwkDKG0sMn2RwEsfF3zjKVrVNyySn977oJcRnOKhKojEExuDymdWRj3VhimGItuuULm5NabA9Mjp1kLFa-sydAiTZmgnVaAWmrE38VhtaTw6w-JQ1kyiUzCZ6489UjmqCIXcjls2zsIwXnUZIfGypdXLYt2cz_xZRSOOpGZjaURKt7lURMGdQ4F_tcS9CA0ARCbS3E',
+    image: 'https://slowmoto.tours/wp-content/uploads/6-days-adventure-motorcycle-trips-Kochi-Header-Desktop.webp',
     days: 10,
     type: 'Culture',
     difficulty: 'Medium'

@@ -12,6 +12,7 @@ import { Food } from './components/Food';
 import { Culture } from './components/Culture';
 import { FAQ } from './components/FAQ';
 import { Gallery } from './components/Gallery';
+import { Stories } from './components/Stories';
 
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
@@ -35,7 +36,9 @@ function App() {
         <Gallery />
 
         <Stories />
-
+        <Testimonials />
+      </main>
+      <Footer />
     </div>
   );
 }
