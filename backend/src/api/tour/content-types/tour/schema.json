@@ -1,0 +1,141 @@
+{
+    "kind": "collectionType",
+    "collectionName": "tours",
+    "info": {
+        "singularName": "tour",
+        "pluralName": "tours",
+        "displayName": "Tour",
+        "description": "Motorcycle tours"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "slug": {
+            "type": "string",
+            "required": true
+        },
+        "title": {
+            "type": "string",
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "subtitle": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "description": {
+            "type": "text",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "duration": {
+            "type": "string"
+        },
+        "introText": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "itinerary": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "pricing": {
+            "type": "component",
+            "repeatable": false,
+            "component": "tour.pricing",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "quickFacts": {
+            "type": "component",
+            "repeatable": false,
+            "component": "tour.quick-facts",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "included": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "requirements": {
+            "type": "json",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "faq": {
+            "type": "component",
+            "repeatable": true,
+            "component": "tour.faq",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "dates": {
+            "type": "component",
+            "repeatable": true,
+            "component": "tour.dates"
+        },
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "headerImage": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "mapImage": {
+            "type": "media",
+            "multiple": false,
+            "allowedTypes": [
+                "images"
+            ]
+        }
+    }
+}

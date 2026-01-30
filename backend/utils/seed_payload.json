@@ -1,0 +1,30 @@
+{
+  "slug": "your-custom-ride",
+  "title": "Your Custom Ride",
+  "subtitle": "Tailor-Made Adventures",
+  "description": "South India is yours! Let´s design your tailor-made Adventure Motorcycle Ride. Your timing, your route, your company - no limits. We'd love to design your custom all inclusive Royal Enfield Adventure.",
+  "duration": "CUSTOM",
+  "introText": [
+    "Based on your ideas, group size and timeframe, we will put together a wonderful tailor-made package for you. With all our creativity, experience and local knowledge.",
+    "Start wherever you want – end wherever you want – choose your area. Whatever your ideas of brilliant custom motorcycle adventure holidays are, we will help you make it happen. With all our experience, our local knowledge, our contacts and our bikes. Or your own bikes if you wish."
+  ],
+  "itinerary": [],
+  "included": [],
+  "requirements": [],
+  "quickFacts": {
+    "startEnd": "Flexible",
+    "tourDuration": "Flexible",
+    "totalDistance": "Flexible",
+    "averageRiding": "Flexible",
+    "bikesMax": "Flexible",
+    "airport": "Dependent on Route"
+  },
+  "pricing": {
+    "rider": 0,
+    "pillion": 0,
+    "singleRoom": 0
+  },
+  "faq": [],
+  "dates": [],
+  "locale": "en"
+}

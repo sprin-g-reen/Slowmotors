@@ -1,0 +1,80 @@
+{
+    "kind": "singleType",
+    "collectionName": "homepages",
+    "info": {
+        "singularName": "homepage",
+        "pluralName": "homepages",
+        "displayName": "Homepage",
+        "description": "Content for the homepage"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "hero": {
+            "type": "component",
+            "repeatable": false,
+            "component": "homepage.hero",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "discover": {
+            "type": "component",
+            "repeatable": false,
+            "component": "homepage.discover",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "founders": {
+            "type": "component",
+            "repeatable": false,
+            "component": "homepage.founders",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "map": {
+            "type": "component",
+            "repeatable": false,
+            "component": "homepage.map",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "testimonials": {
+            "type": "component",
+            "repeatable": false,
+            "component": "homepage.testimonials",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "bottomContent": {
+            "type": "component",
+            "repeatable": false,
+            "component": "homepage.bottom-content",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        }
+    }
+}

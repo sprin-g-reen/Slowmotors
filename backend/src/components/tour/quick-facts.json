@@ -1,0 +1,31 @@
+{
+    "collectionName": "components_tour_quick_facts",
+    "info": {
+        "displayName": "Quick Facts",
+        "icon": "info-circle"
+    },
+    "options": {},
+    "attributes": {
+        "startEnd": {
+            "type": "string"
+        },
+        "tourDuration": {
+            "type": "string"
+        },
+        "totalDistance": {
+            "type": "string"
+        },
+        "averageRiding": {
+            "type": "string"
+        },
+        "bikesMax": {
+            "type": "string"
+        },
+        "airport": {
+            "type": "string"
+        },
+        "pillionNote": {
+            "type": "text"
+        }
+    }
+}

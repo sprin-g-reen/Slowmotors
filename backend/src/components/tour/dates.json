@@ -1,0 +1,36 @@
+{
+    "collectionName": "components_tour_dates",
+    "info": {
+        "displayName": "Dates",
+        "icon": "calendar-alt"
+    },
+    "options": {},
+    "attributes": {
+        "start": {
+            "type": "date"
+        },
+        "end": {
+            "type": "date"
+        },
+        "availability": {
+            "type": "enumeration",
+            "enum": [
+                "Available",
+                "Few Seats",
+                "Full",
+                "Warning"
+            ]
+        },
+        "availabilityDe": {
+            "type": "string"
+        },
+        "status": {
+            "type": "enumeration",
+            "enum": [
+                "available",
+                "warning",
+                "full"
+            ]
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fbfbfb; /* Light parchment-like fallback */
+  --foreground: #333333;
+  
+  /* Brand Colors */
+  --primary: #138808;
+  --secondary: #FF9933;
+  --footer-bg: #1C2022;
+  --light-text: #FFFDFD;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-footer: var(--footer-bg);
+  --color-light: var(--light-text);
+  
+  --font-sans: var(--font-reem-kufi);
+}
+
+body {
+  background-color: var(--background);
+  background-image: url('https://slowmoto.tours/wp-content/uploads/Site-Background-Desktop.webp'); /* Direct link for now, better to optimize later */
+  background-repeat: repeat;
+  background-size: auto;
+  color: var(--foreground);
+  font-family: var(--font-reem-kufi), sans-serif;
+}
+

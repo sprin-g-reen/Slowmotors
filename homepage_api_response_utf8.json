@@ -1,0 +1,66 @@
+﻿{
+    "data":  {
+                 "id":  2,
+                 "documentId":  "ssusn1vwwk60ostbaqrfbxxb",
+                 "createdAt":  "2026-01-28T09:37:24.159Z",
+                 "updatedAt":  "2026-01-28T09:37:24.159Z",
+                 "publishedAt":  "2026-01-28T09:37:24.164Z",
+                 "locale":  "en",
+                 "hero":  {
+                              "id":  2,
+                              "title":  "time to explore",
+                              "subtitle":  "Experience authentic India on guided Royal Enfield motorcycle tours",
+                              "cta":  "FIND YOUR MOTORCYCLE RIDE"
+                          },
+                 "discover":  {
+                                  "id":  2,
+                                  "label":  "Discover",
+                                  "title":  "Southern India",
+                                  "text1":  "From the lush backwaters of Kerala to the vibrant beaches of Goa, Southern India is a rider\u0027s paradise. Our guided tours take you through winding mountain roads, ancient temples, and aromatic spice plantations.",
+                                  "text2":  "Experience the true essence of India, moving at a pace that allows you to absorb every detail. This isn\u0027t just a motorcycle tour; it\u0027s a journey into the soul of a culture.",
+                                  "cta":  "EXPLORE OUR TOURS"
+                              },
+                 "founders":  {
+                                  "id":  2,
+                                  "label":  "The Founders",
+                                  "title":  "Jo \u0026 Pratish",
+                                  "text":  "Slow Moto Tours was born from a shared passion for exploration, motorcycles, and the rich tapestry of Indian life. Jo and Pratish believe in \"Slow Travel\" – the art of taking it all in, one mile at a time.",
+                                  "list":  [
+                                               "15+ years of experience leading tours in India.",
+                                               "Expert knowledge of local routes and hidden gems.",
+                                               "Deep commitment to sustainable and respectful tourism."
+                                           ],
+                                  "cta":  "OUR PHILOSOPHY"
+                              },
+                 "map":  {
+                             "id":  2,
+                             "label":  "Our Area",
+                             "title":  "RIDERS PARADISE",
+                             "text":  "From Kochi to Goa, we\u0027ve mapped out the most scenic, soulful, and satisfying routes for any rider."
+                         },
+                 "testimonials":  {
+                                      "id":  2,
+                                      "label":  "Riders Speak",
+                                      "title":  "Testimonials"
+                                  },
+                 "bottomContent":  {
+                                       "id":  2,
+                                       "title":  "Discover the Magic of Southern India with Slow Moto Tours",
+                                       "text":  "Are you ready for an unforgettable adventure through the breathtaking landscapes of Southern India?",
+                                       "cta":  "Discover the Beauty and Thrills of Your Motorbike Holidays"
+                                   },
+                 "localizations":  [
+                                       {
+                                           "id":  4,
+                                           "documentId":  "ssusn1vwwk60ostbaqrfbxxb",
+                                           "createdAt":  "2026-01-28T09:37:24.194Z",
+                                           "updatedAt":  "2026-01-28T09:37:24.194Z",
+                                           "publishedAt":  "2026-01-28T09:37:24.198Z",
+                                           "locale":  "de"
+                                       }
+                                   ]
+             },
+    "meta":  {
+
+             }
+}

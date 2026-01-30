@@ -1,0 +1,32 @@
+{
+    "collectionName": "components_homepage_founders",
+    "info": {
+        "displayName": "Founders",
+        "icon": "users"
+    },
+    "options": {},
+    "attributes": {
+        "label": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "text": {
+            "type": "text"
+        },
+        "list": {
+            "type": "json"
+        },
+        "cta": {
+            "type": "string"
+        },
+        "image": {
+            "type": "media",
+            "allowedTypes": [
+                "images"
+            ],
+            "multiple": false
+        }
+    }
+}

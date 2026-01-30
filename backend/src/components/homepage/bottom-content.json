@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_homepage_bottom_contents",
+    "info": {
+        "displayName": "Bottom Content",
+        "icon": "arrow-down"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "text": {
+            "type": "text"
+        },
+        "cta": {
+            "type": "string"
+        }
+    }
+}
